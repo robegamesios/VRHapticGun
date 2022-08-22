@@ -66,3 +66,7 @@ in Line 36, change the values to `false` if you don't want unlimited ammo and al
         GiveAllUnlockedWeapons(true);
                 
 Once you're done with updating the firmware, turn on the gun and go ahead and run the program, it will start HLA. You can also publish an executable file (I included one in the PUBLISH folder) and just run it directly without having Visual Studio opened.
+
+# Repository of Half-Life: Alyx Event Detector
+
+https://github.com/Solla/HalfLifeAlyxEventDetector

@@ -18,6 +18,11 @@ For items 1 and 2, I think any toy gun with electric blowback (ebb) will work in
 
 Total cost for 1 gun is roughly $70. A bunch of the components come in bundles so buying them cost more. Obviously if you got some parts lying around, it can get cheaper.
 
+# Building:
+The esp32 cannot drive the motor directly, hence you need to add some components to do this.
+
+Here is the link to assemble the circuitry to control the motor using the esp32 (including the parts used): https://diyi0t.com/control-dc-motor-without-ic-motor-driver/
+
 # Firmware:
 Open ESP32-HLA-WIFI.ino file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:
 

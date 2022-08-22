@@ -26,7 +26,8 @@ Here is the link to assemble the circuitry to control the motor using the esp32 
 And this is how I connected it:
 ![ebbConnection buck](https://user-images.githubusercontent.com/10041871/185839941-cfa3aa06-466c-4cf3-883a-3b95f5192b74.png)
 
-You can connect a buck converter if you want to lower the voltage going to the esp32, i ended up not installing this since the 6V battery didn't affect the esp32 (only got a little warm). I think the 5V pin can handle upto 12V but some boards may not like this and will heat up.
+1. You can connect a buck converter if you want to lower the voltage going to the esp32, i ended up not installing this since the 6V battery didn't affect the esp32 (only got a little warm). I think the 5V pin can handle upto 12V but some boards may not like this and will heat up.
+2. You can use any pin for the signal to the MOSFET's gate, in my final build i used pin23 for the signal.
 
 # Firmware:
 Open ESP32-HLA-WIFI.ino file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:

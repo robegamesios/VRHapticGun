@@ -18,6 +18,17 @@ For items 1 and 2, I think any toy gun with electric blowback (ebb) will work in
 
 Total cost for 1 gun is roughly $70. A bunch of the components come in bundles so buying them cost more. Obviously if you got some parts lying around, it can get cheaper.
 
+# Firmware:
+Open ESP32-HLA-WIFI.ino file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:
+
+    const char* ssid = "YourWifiSSID"; //change this to your wifi SSID
+
+    const char* password = "YourWifiPassword"; //change this to your wifi password
+
+    const uint ServerPort = 23; //if you change this port, make sure to update the Programs.cs file to match this port
+
+Go ahead and download the files to your esp32 board.
+
 # Software:
 I forked a Half Life Alyx Event Detector repo and updated it to work with the VR gun.
 
@@ -30,13 +41,11 @@ in Line 24:
     //Change this to use the ip address of your esp32
     tcpclnt.Connect("esp32IPAddress", 23); //23 is your port number. Change this to match the port number you specified in the esp32 code
 
-# Firmware:
-Open ESP32-HLA-WIFI.ino file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:
+in Line 36, change the values to `false` if you don't want unlimited ammo and all the weapons:
 
-    const char* ssid = "YourWifiSSID"; //change this to your wifi SSID
-
-    const char* password = "YourWifiPassword"; //change this to your wifi password
-
-    const uint ServerPort = 23; //if you change this port, make sure to update the Programs.cs file to match this port
-
-Go ahead and download the files to your esp32 board.
+    HalfLifeAlyx_Autoexec HLA_Autoexec =
+        new HalfLifeAlyx_Autoexec().
+        UnlimitedMagazineInBag(true).
+        GiveAllUnlockedWeapons(true);
+                
+Once you're done with updating the firmware, turn on the gun and go ahead and run the program, it will start HLA. 

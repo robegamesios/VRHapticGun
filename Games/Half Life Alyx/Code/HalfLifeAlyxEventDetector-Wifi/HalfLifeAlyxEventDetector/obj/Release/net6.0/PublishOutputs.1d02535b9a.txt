@@ -1,0 +1,16 @@
+C:\Users\Alien\Downloads\Publish\HalfLifeAlyxEventDetector.exe
+C:\Users\Alien\Downloads\Publish\HalfLifeAlyxEventDetector.dll
+C:\Users\Alien\Downloads\Publish\HalfLifeAlyxEventDetector.deps.json
+C:\Users\Alien\Downloads\Publish\HalfLifeAlyxEventDetector.runtimeconfig.json
+C:\Users\Alien\Downloads\Publish\HalfLifeAlyxEventDetector.pdb
+C:\Users\Alien\Downloads\Publish\System.CodeDom.dll
+C:\Users\Alien\Downloads\Publish\System.IO.Ports.dll
+C:\Users\Alien\Downloads\Publish\System.Management.dll
+C:\Users\Alien\Downloads\Publish\runtimes\linux-arm\native\libSystem.IO.Ports.Native.so
+C:\Users\Alien\Downloads\Publish\runtimes\linux-arm64\native\libSystem.IO.Ports.Native.so
+C:\Users\Alien\Downloads\Publish\runtimes\linux-x64\native\libSystem.IO.Ports.Native.so
+C:\Users\Alien\Downloads\Publish\runtimes\osx-arm64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\Alien\Downloads\Publish\runtimes\osx-x64\native\libSystem.IO.Ports.Native.dylib
+C:\Users\Alien\Downloads\Publish\runtimes\unix\lib\net6.0\System.IO.Ports.dll
+C:\Users\Alien\Downloads\Publish\runtimes\win\lib\net6.0\System.IO.Ports.dll
+C:\Users\Alien\Downloads\Publish\runtimes\win\lib\netcoreapp2.0\System.Management.dll

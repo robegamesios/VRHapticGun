@@ -36,7 +36,7 @@ And this is how I connected it:
 8. Finally, i fitted all the parts to the Recoil RK-45 pistol (had to cut and grind to fit the parts) and added some paint.
 
 # Firmware:
-Open ESP32-HLA-WIFI.ino file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:
+Open `ESP32-HLA-WIFI.ino` file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:
 
     const char* ssid = "YourWifiSSID"; //change this to your wifi SSID
 
@@ -51,7 +51,7 @@ I forked a Half Life Alyx Event Detector repo and updated it to work with the VR
 
 Repository of Half-Life: Alyx Event Detector: https://github.com/Solla/HalfLifeAlyxEventDetector
 
-Open Programs.cs and change the following:
+Open `Programs.cs` and change the following:
 
 in Line 24:
 

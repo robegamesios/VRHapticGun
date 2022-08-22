@@ -24,8 +24,10 @@ Repository of Half-Life: Alyx Event Detector: https://github.com/Solla/HalfLifeA
 # Firmware:
 Open ESP32-HLA-WIFI.ino file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:
 
-const char* ssid = "YourWifiSSID"; //change this to your wifi SSID
-const char* password = "YourWifiPassword"; //change this to your wifi password
-const uint ServerPort = 23; //if you change this port, make sure to update the Programs.cs file to match this port
+    const char* ssid = "YourWifiSSID"; //change this to your wifi SSID
+
+    const char* password = "YourWifiPassword"; //change this to your wifi password
+
+    const uint ServerPort = 23; //if you change this port, make sure to update the Programs.cs file to match this port
 
 Go ahead and download the files to your esp32 board.

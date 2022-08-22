@@ -67,6 +67,11 @@ in Line 36, change the values to `false` if you don't want unlimited ammo and al
                 
 Once you're done with updating the firmware, turn on the gun and go ahead and run the program, it will start HLA. You can also publish an executable file (I included one in the PUBLISH folder) and just run it directly without having Visual Studio opened.
 
+# TODOs
+
+1. Add a GUI so you can enter IP address before running the game.
+2. Detect when you disconnect/reconnect the gun grip from the gun. Then in the game, the weapon will automatically get removed (show only the hand) or automatically switch to the last weapon selected when reconnected.
+
 # Repository of Half-Life: Alyx Event Detector
 
 https://github.com/Solla/HalfLifeAlyxEventDetector

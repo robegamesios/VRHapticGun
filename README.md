@@ -30,7 +30,7 @@ And this is how I connected it:
 2. You can use any pin for the signal to the MOSFET's gate, in my final build i used pin23 for the signal.
 3. The ebb i used was from a Recoil SR-12 rifle which uses 9V (6-AA batteries), so i used a step up boost converted to raise the voltage to 9V.
 4. I used the hitec cable to connect/disconnect the battery from the gun. So when i need to charge the battery, i can just disconnect it from the gun and connect it to the charger.
-5. I used the lower half of the pistol grip and attached a magnet. Doing this makes it easy to remove the pistol grip from the gun to mount the quest 2 controller, and then reattach it to the gun.
+5. I used the lower half of the pistol grip and attached a magnet. Doing this makes it easy to remove the pistol grip from the gun to mount the quest 2 controller, and then reattach it to the gun. (I could not find a 3D file to print for a quest gun grip, otherwise i would have 3d printed instead of buying)
     ![6](https://user-images.githubusercontent.com/10041871/186064966-eae7154e-f186-4b3b-bc4d-9c9363f4dff0.png)
 
 6. I 3d printed a battery holder, a cover for the esp32 and clip to attach velcro to the gun grip. All these are optional though.

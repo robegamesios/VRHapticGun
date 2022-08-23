@@ -49,6 +49,7 @@ Here is a good video on how to disassemble a Recoil RK-45 spitfire pistol: https
 ![1](https://user-images.githubusercontent.com/10041871/186065155-fa454b3d-5eb0-4384-975d-64ec3bbcf4c7.png)
 ![2](https://user-images.githubusercontent.com/10041871/186065159-8d996391-8d25-4ed5-839f-b0f8264caeb4.png)
 
+The blue light in the esp32 indicates it's connected to wifi.
 
 # Firmware:
 Open `ESP32-HLA-WIFI.ino` file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:

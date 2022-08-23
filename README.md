@@ -16,7 +16,7 @@ For items 1 and 2, I think any toy gun with electric blowback (ebb) will work in
 10. Hitec cable (10 pcs) $12: https://www.amazon.com/dp/B07QJSWNFM?psc=1&ref=ppx_yo2ov_dt_b_product_details
 11. Neodymium Magnet (6 pcs) $16: https://www.amazon.com/dp/B08YYNFQ41?psc=1&ref=ppx_yo2ov_dt_b_product_details
 
-Total cost for 1 gun is roughly $70. A bunch of the components come in bundles so buying them cost more. Obviously if you got some parts lying around, it can get cheaper.
+Total cost for 1 gun is roughly $70. The most expensive part is the gun and the batteries. A bunch of the components come in bundles so buying them cost more. Obviously if you already own some of the parts, it can get cheaper.
 
 # Building:
 The esp32 cannot drive the motor directly, hence you need to add some components to do this.

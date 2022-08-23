@@ -59,6 +59,14 @@ Open `ESP32-HLA-WIFI.ino` file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-
 
     const uint ServerPort = 23; //if you change this port, make sure to update the Programs.cs file to match this port
 
+In the function `EchoReceivedData()` modify the delay time to fit the timing of your ebb. Mine works at 75 millisecond for trigger 1 cycle.
+
+       digitalWrite(PIN_MOTOR, HIGH);
+       
+       delay(75);
+       
+       digitalWrite(PIN_MOTOR, LOW); 
+       
 Go ahead and download the files to your esp32 board.
 
 # Software:

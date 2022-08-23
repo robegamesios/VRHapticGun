@@ -26,6 +26,8 @@ Here is the link to assemble the circuitry to control the motor using the esp32 
 And this is how I connected it:
 ![ebbConnection buck](https://user-images.githubusercontent.com/10041871/185839941-cfa3aa06-466c-4cf3-883a-3b95f5192b74.png)
 
+Here is a good video on how to disassemble a Recoil RK-45 spitfire pistol: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiE4Ouiidz5AhUKLzQIHRUZBM8QwqsBegQIBhAB&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DS81l8VBC7dw&usg=AOvVaw36cihDIYPepnFAOpwIpYmh
+
 1. You can connect a buck converter if you want to lower the voltage going to the esp32, i ended up not installing this since the 6V battery didn't affect the esp32 (only got a little warm). I think the 5V pin can handle upto 12V but some boards may not like this and will heat up.
 2. You can use any pin for the signal to the MOSFET's gate, in my final build i used pin23 for the signal.
 3. The ebb i used was from a Recoil SR-12 rifle which uses 9V (6-AA batteries), so i used a step up boost converted to raise the voltage to 9V.

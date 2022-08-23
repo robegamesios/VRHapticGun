@@ -31,9 +31,22 @@ And this is how I connected it:
 3. The ebb i used was from a Recoil SR-12 rifle which uses 9V (6-AA batteries), so i used a step up boost converted to raise the voltage to 9V.
 4. I used the hitec cable to connect/disconnect the battery from the gun. So when i need to charge the battery, i can just disconnect it from the gun and connect it to the charger.
 5. I used the lower half of the pistol grip and attached a magnet. Doing this makes it easy to remove the pistol grip from the gun to mount the quest 2 controller, and then reattach it to the gun.
+    ![6](https://user-images.githubusercontent.com/10041871/186064966-eae7154e-f186-4b3b-bc4d-9c9363f4dff0.png)
+
 6. I 3d printed a battery holder, a cover for the esp32 and clip to attach velcro to the gun grip. All these are optional though.
-7. I added a toggle switch to turn the gun On/Off.
-8. Finally, i fitted all the parts to the Recoil RK-45 pistol (had to cut and grind to fit the parts) and added some paint.
+    ![5](https://user-images.githubusercontent.com/10041871/186065066-80069735-4d23-472b-a432-5ae17775a55d.png)
+    ![4](https://user-images.githubusercontent.com/10041871/186065080-e8c14e76-a184-4530-a942-ed7fc75ef555.png)
+
+7. I used some velcro and a cushion strap from an old bag to make a strap.
+    ![3](https://user-images.githubusercontent.com/10041871/186065163-1c6b8482-f6e6-4671-b518-20f89cd77017.png)
+
+8. I added a toggle switch to turn the gun On/Off.
+
+9. Finally, i fitted all the parts to the Recoil RK-45 pistol (had to cut and grind to fit the parts) and added some paint.
+
+![1](https://user-images.githubusercontent.com/10041871/186065155-fa454b3d-5eb0-4384-975d-64ec3bbcf4c7.png)
+![2](https://user-images.githubusercontent.com/10041871/186065159-8d996391-8d25-4ed5-839f-b0f8264caeb4.png)
+
 
 # Firmware:
 Open `ESP32-HLA-WIFI.ino` file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:

@@ -71,7 +71,7 @@ In the function `EchoReceivedData()` modify the delay time to fit the timing of 
 Go ahead and download the files to your esp32 board.
 
 # Software:
-I forked a Half Life Alyx Event Detector repo and updated it to work with the VR gun.
+I forked a Half Life Alyx Event Detector repo and updated it to work with the gun's ebb.
 
 Repository of Half-Life: Alyx Event Detector: https://github.com/Solla/HalfLifeAlyxEventDetector
 

@@ -83,14 +83,14 @@ namespace HalfLifeAlyxEventDetector
             switch (WeaponType)
             {
                 case NowWeaponType.Energygun:
-                    byte[] ba = asen.GetBytes("1"); 
+                    byte[] ba = asen.GetBytes("0"); 
                     stm.Write(ba, 0, ba.Length);
-                    Console.WriteLine("sending 1");
+                    Console.WriteLine("sending 0");
                     break;
                 case NowWeaponType.Rapidfire:
-                    byte[] bb = asen.GetBytes("0");
+                    byte[] bb = asen.GetBytes("1");
                     stm.Write(bb, 0, bb.Length);
-                    Console.WriteLine("sending 0");
+                    Console.WriteLine("sending 1");
                     break;
                 case NowWeaponType.Shotgun:
                     byte[] bc = asen.GetBytes("2");

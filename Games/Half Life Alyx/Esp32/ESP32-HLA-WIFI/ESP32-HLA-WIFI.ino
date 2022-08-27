@@ -40,7 +40,6 @@ void EchoReceivedData()
     Serial.print("Received: ");
     Serial.println(incoming);
 
-    Serial.println("weapon = 0");
     digitalWrite(PIN_MOTOR, HIGH);
     delay(75);
     digitalWrite(PIN_MOTOR, LOW);      

@@ -22,7 +22,6 @@ namespace HalfLifeAlyxEventDetector
 
                 //Change this to use the ip address of your esp32
                 tcpclnt.Connect("esp32IPAddress", 23); //23 is your port number. Change this to match the port number you specified in the esp32 code
-                // use the ipaddress as in the server program
 
              }
             catch (Exception e)

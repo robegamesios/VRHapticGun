@@ -1,12 +1,12 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-int LED_BUILTIN = 2;
-int PIN_MOTOR = 23;
+int LED_BUILTIN = 2; //this is the blue led on the esp32 that lights up when connected to WIFI
+int PIN_MOTOR = 23; //this is the signal pin connected to the esp32
 
-const char* ssid = "YourWifiSSID";
-const char* password = "YourWifiPassword";
-const uint ServerPort = 23;
+const char* ssid = "YourWifiSSID"; //change this to your WIFI SSID
+const char* password = "YourWifiPassword"; //change this to your WIFI password
+const uint ServerPort = 23; //23 is your port number. Change this to match the port number you specified in Programs.cs file
 WiFiServer Server(ServerPort);
 WiFiClient RemoteClient;
 
@@ -40,9 +40,9 @@ void EchoReceivedData()
     Serial.print("Received: ");
     Serial.println(incoming);
 
-    digitalWrite(PIN_MOTOR, HIGH);
-    delay(75);
-    digitalWrite(PIN_MOTOR, LOW);      
+    digitalWrite(PIN_MOTOR, HIGH); //This will turn ON the ebb motor
+    delay(75); //Change this to match your timing for the ebb. e.g. 75ms will run the ebb for 1 firing cycle.
+    digitalWrite(PIN_MOTOR, LOW); //This will turn OFF the ebb motor      
   }
 }
 

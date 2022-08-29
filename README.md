@@ -52,58 +52,80 @@ Here is a good video on how to disassemble a Recoil RK-45 spitfire pistol: https
 The blue light in the esp32 indicates it's connected to wifi.
 
 # Firmware:
-Open `ESP32-HLA-WIFI.ino` file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:
+1. In order to communicate with your esp32 via COM port, you need to install the Silabs CP210x USB to UART chip driver:
 
-    const char* ssid = "YourWifiSSID"; //change this to your wifi SSID
+    a. Go to Silicon Labs' driver download page: https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
+    
+    b. Go to the downloads section and download the "CP210x Windows Drivers" (third in the list).
+    
+    c. Extract the .zip and run CP210xVCPInstaller_x64.exe.
+    
+    d. In your window computer, go to Settings -> Devices Manager, under Ports section, you will see Silicon Labs CP210x USB to UART Bridge (COM<number>). This is the port you should select in your IDE. Make sure your micro USB cable is capable of transmitting data and not just for charging.
+    
+2. Next you need to add the ESP32 package to your Arduino IDE:
 
-    const char* password = "YourWifiPassword"; //change this to your wifi password
+    a. Go to File > Preferences in your Arduino IDE
+    
+    b. In the "Additional Board Manager URLs" field, enter this link: https://dl.espressif.com/dl/package_esp32_index.json and click the OK button
+    
+    c. Go to Tools > Board > Boards Manager
+    
+    d. Search "esp32" and install the "ESP32 by Espressif Systems" package.
+    
+    e. Select your ESP32 board from Tools -> Board -> ESP32 Dev Module
 
-    const uint ServerPort = 23; //if you change this port, make sure to update the Programs.cs file to match this port
+3. Open `ESP32-HLA-WIFI.ino` file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:
 
-In the function `EchoReceivedData()` modify the delay time to fit the timing of your ebb. Mine works at 75 millisecond for trigger 1 cycle.
+        const char* ssid = "YourWifiSSID"; //change this to your wifi SSID
 
-       digitalWrite(PIN_MOTOR, HIGH);
-       
-       delay(75);
-       
-       digitalWrite(PIN_MOTOR, LOW); 
-       
-Go ahead and download the files to your esp32 board.
+        const char* password = "YourWifiPassword"; //change this to your wifi password
+
+        const uint ServerPort = 23; //if you change this port, make sure to update the Programs.cs file to match this port
+
+4. In the function `EchoReceivedData()` modify the delay time to fit the timing of your ebb. Mine works at 75 millisecond for 1 firing cycle.
+
+        digitalWrite(PIN_MOTOR, HIGH); //This will turn ON the ebb motor
+    
+        delay(75); //Change this to match your timing for the ebb. e.g. 75ms will run the ebb for 1 firing cycle.
+    
+        digitalWrite(PIN_MOTOR, LOW); //This will turn OFF the ebb motor   
+           
+5. Go ahead and download the files to your esp32 board.
 
 # Software:
 I forked a Half Life Alyx Event Detector repo and updated it to work with the gun's ebb.
 
 Repository of Half-Life: Alyx Event Detector: https://github.com/Solla/HalfLifeAlyxEventDetector
 
-This repo has SteamAPIHelper class that's suppose to detect your HLA installation location but it didn't work for me. So if you are having the same issue, modify these files:
+1. This repo has SteamAPIHelper class that's suppose to detect your HLA installation location but it didn't work for me. So I just hard coded my HLA installation path. Modify these files:
 
-In `HalfLifeAlyx_Manager.cs` file, line 72, change this to your HLA install location:
+    a. In `HalfLifeAlyx_Manager.cs` file, line 72, change this to your HLA install location:
 
-    _HalfLifeAlyxPath = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Half-Life Alyx";
+        _HalfLifeAlyxPath = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Half-Life Alyx";
     
-In `SteamAPIHelper.cs` file, line 47, change this to your Steam folder location:
+    b. In `SteamAPIHelper.cs` file, line 47, change this to your Steam folder location:
 
-    _SteamLocation = "C:\\Program Files (x86)\\Steam";
+        _SteamLocation = "C:\\Program Files (x86)\\Steam";
     
-In `SteamAPIHelper.cs`, line 98, change this to your Steam folder location:
+    c. In `SteamAPIHelper.cs`, line 98, change this to your Steam folder location:
 
-    _SteamLocation = "C:\\Program Files (x86)\\Steam";
+        _SteamLocation = "C:\\Program Files (x86)\\Steam";
     
-Open `Programs.cs` and change the following:
+2. Open `Programs.cs` and change the following:
 
-in Line 24:
+    in Line 24:
 
-    //Change this to use the ip address of your esp32
-    tcpclnt.Connect("esp32IPAddress", 23); //23 is your port number. Change this to match the port number you specified in the esp32 code
+        //Change this to use the ip address of your esp32
+        tcpclnt.Connect("esp32IPAddress", 23); //23 is your port number. Change this to match the port number you specified in the esp32 code
 
-in Line 36, change the values to `false` if you don't want unlimited ammo and all the weapons:
+    in Line 36, change the values to `false` if you don't want unlimited ammo and all the weapons:
 
-    HalfLifeAlyx_Autoexec HLA_Autoexec =
-        new HalfLifeAlyx_Autoexec().
-        UnlimitedMagazineInBag(true).
-        GiveAllUnlockedWeapons(true);
+        HalfLifeAlyx_Autoexec HLA_Autoexec =
+            new HalfLifeAlyx_Autoexec().
+            UnlimitedMagazineInBag(true).
+            GiveAllUnlockedWeapons(true);
                 
-Once you're done with updating the firmware, turn on the gun and go ahead and run the program, it will start HLA. You can also publish an executable file (I included one in the PUBLISH folder) and just run it directly without having Visual Studio opened.
+3. Once you're done with updating the firmware, turn on the gun and go ahead and run the program, it will start HLA. You can also publish an executable file (I included one in the PUBLISH folder) and just run it directly without having Visual Studio opened.
 
 # TODOs
 

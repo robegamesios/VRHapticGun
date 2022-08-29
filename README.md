@@ -90,7 +90,7 @@ The blue light in the esp32 indicates it's connected to wifi.
     
         digitalWrite(PIN_MOTOR, LOW); //This will turn OFF the ebb motor   
            
-5. Go ahead and download the files to your esp32 board.
+5. Go ahead and upload the files to your esp32 board. If you are getting an error, you might need to press the boot button in the esp32 while uploading.
 
 # Software:
 I forked a Half Life Alyx Event Detector repo and updated it to work with the gun's ebb.

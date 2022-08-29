@@ -75,6 +75,20 @@ I forked a Half Life Alyx Event Detector repo and updated it to work with the gu
 
 Repository of Half-Life: Alyx Event Detector: https://github.com/Solla/HalfLifeAlyxEventDetector
 
+This repo has SteamAPIHelper class that's suppose to detect your HLA installation location but it didn't work for me. So if you are having the same issue, modify these files:
+
+In `HalfLifeAlyx_Manager.cs` file, line 72, change this to your HLA install location:
+
+    _HalfLifeAlyxPath = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Half-Life Alyx";
+    
+In `SteamAPIHelper.cs` file, line 47, change this to your Steam folder location:
+
+    _SteamLocation = "C:\\Program Files (x86)\\Steam";
+    
+In `SteamAPIHelper.cs`, line 98, change this to your Steam folder location:
+
+    _SteamLocation = "C:\\Program Files (x86)\\Steam";
+    
 Open `Programs.cs` and change the following:
 
 in Line 24:

@@ -72,7 +72,7 @@ The blue light in the esp32 indicates it's connected to wifi.
     
     d. Search "esp32" and install the "ESP32 by Espressif Systems" package.
     
-    e. Select your ESP32 board from Tools -> Board -> ESP32 Dev Module
+    e. Select your ESP32 board from Tools -> Board -> Boards Manager -> ESP32 Dev Module
 
 3. Open `ESP32-HLA-WIFI.ino` file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:
 

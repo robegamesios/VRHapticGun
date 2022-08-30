@@ -15,6 +15,9 @@ For items 1 and 2, I think any toy gun with electric blowback (ebb) will work in
 9. Quest 2 pistol grip (2 pcs) $15: https://www.amazon.com/dp/B09MCT4LC1?psc=1&ref=ppx_yo2ov_dt_b_product_details
 10. Hitec cable (10 pcs) $12: https://www.amazon.com/dp/B07QJSWNFM?psc=1&ref=ppx_yo2ov_dt_b_product_details
 11. Neodymium Magnet (6 pcs) $16: https://www.amazon.com/dp/B08YYNFQ41?psc=1&ref=ppx_yo2ov_dt_b_product_details
+12. MOSFET (20 pcs) $10: https://www.amazon.com/gp/product/B07MW1N4Q5/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B07MW1N4Q5&linkCode=as2&tag=diyi0t-20&linkId=61d738477c1332b796febffe72b8747d
+13. Diode (100 pcs) $5: https://www.amazon.com/gp/product/B071YWNBVM/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B071YWNBVM&linkCode=as2&tag=diyi0t-20&linkId=fc65d651ea3e32ed36e7bae2abe47e61
+14. Resistors (1 kit) $12: https://www.amazon.com/gp/product/B072BL2VX1/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B072BL2VX1&linkCode=as2&tag=diyi0t-20&linkId=a8e83b518a10f9e815cd58dc759716cf
 
 Total cost for 1 gun is roughly $70. The most expensive part is the gun and the batteries. A bunch of the components come in bundles so buying them cost more. Obviously if you already own some of the parts, it can get cheaper.
 

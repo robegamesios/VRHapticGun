@@ -98,43 +98,33 @@ The blue light in the esp32 indicates it's connected to wifi.
 # Software:
 I forked a Half Life Alyx Event Detector repo and updated it to work with the gun's ebb.
 
-Repository of Half-Life: Alyx Event Detector: https://github.com/Solla/HalfLifeAlyxEventDetector
-
-1. This repo has SteamAPIHelper class that's suppose to detect your HLA installation location but it didn't work for me. So I just hard coded my HLA installation path. Modify these files:
-
-    a. In `HalfLifeAlyx_Manager.cs` file, line 72, change this to your HLA install location:
-
-        _HalfLifeAlyxPath = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Half-Life Alyx";
+Repository of BHaptics Half-Life Alyx: https://github.com/bhaptics/bhaptics-half-life-alyx
     
-    b. In `SteamAPIHelper.cs` file, line 47, change this to your Steam folder location:
+1. Open `Forms1.cs` and change the following:
 
-        _SteamLocation = "C:\\Program Files (x86)\\Steam";
-    
-    c. In `SteamAPIHelper.cs`, line 98, change this to your Steam folder location:
-
-        _SteamLocation = "C:\\Program Files (x86)\\Steam";
-    
-2. Open `Programs.cs` and change the following:
-
-    in Line 24:
+    in Line 441:
 
         //Change this to use the ip address of your esp32
         tcpclnt.Connect("esp32IPAddress", 23); //23 is your port number. Change this to match the port number you specified in the esp32 code
-
-    in Line 36, change the values to `false` if you don't want unlimited ammo and all the weapons:
-
-        HalfLifeAlyx_Autoexec HLA_Autoexec =
-            new HalfLifeAlyx_Autoexec().
-            UnlimitedMagazineInBag(true).
-            GiveAllUnlockedWeapons(true);
                 
-3. Once you're done with updating the firmware, turn on the gun and go ahead and run the program, it will start HLA. You can also publish an executable file (I included one in the PUBLISH folder) and just run it directly without having Visual Studio opened.
+2. Turn on the gun and go ahead and run the program.
+    
+3. Once `bHaptics Tactsuit + Haptic Gun Alyx Interface` is open:
+    
+    a. click Start button - if you have not set the Half-Life Alyx folder, it will ask you to set it. Do this by clicking the `Browse...` button.
+    
+    b. click Test button - if your gun is properly connected, it should activate (trigger fire).
+    
+    ![bHaptics Tactsuit + Haptic Gun Alyx Interface 9_2_2022 12_38_21 PM](https://user-images.githubusercontent.com/10041871/188225462-cd67f8b0-e22b-402c-8603-498d4a7130eb.png)
 
+4. Launch SteamVR and start Half-Life Alyx game.
+
+NOTE: This app will work with the Haptic Gun even if you do not have BHaptics gear (tactsuit, tactosy, etc). Likewise, it should work with BHaptics gear without having a Haptic Gun. 
+    
 # TODOs
 
 1. Add a GUI so you can enter IP address before running the game.
 2. Detect when you disconnect/reconnect the gun grip from the gun. Then in the game, the weapon will automatically get removed (show only the hand) or automatically switch to the last weapon selected when reconnected.
 
-# Repository of Half-Life: Alyx Event Detector
-
-https://github.com/Solla/HalfLifeAlyxEventDetector
+# Repository of BHaptics Half-Life Alyx:
+https://github.com/bhaptics/bhaptics-half-life-alyx

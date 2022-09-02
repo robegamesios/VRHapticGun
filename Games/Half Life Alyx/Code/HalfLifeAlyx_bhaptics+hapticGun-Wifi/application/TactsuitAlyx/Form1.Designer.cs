@@ -37,6 +37,11 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtHapticGunIpAddress = new System.Windows.Forms.TextBox();
+            this.txtHapticGunPortNumber = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -80,7 +85,7 @@
             // 
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(25, 342);
+            this.lblInfo.Location = new System.Drawing.Point(25, 380);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(74, 20);
             this.lblInfo.TabIndex = 3;
@@ -120,7 +125,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 304);
+            this.label2.Location = new System.Drawing.Point(25, 350);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(421, 20);
             this.label2.TabIndex = 7;
@@ -149,6 +154,56 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(25, 290);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(276, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Haptic Gun IP Address and Port Number";
+            // 
+            // txtHapticGunIpAddress
+            // 
+            this.txtHapticGunIpAddress.Enabled = true;
+            this.txtHapticGunIpAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHapticGunIpAddress.Location = new System.Drawing.Point(29, 315);
+            this.txtHapticGunIpAddress.Name = "txtHapticGunIpAddress";
+            this.txtHapticGunIpAddress.Size = new System.Drawing.Size(220, 23);
+            this.txtHapticGunIpAddress.TabIndex = 11;
+            this.txtHapticGunIpAddress.Text = Properties.Settings.Default.HapticGunIpAddress;
+            // 
+            // txtHapticGunPortNumber
+            // 
+            this.txtHapticGunPortNumber.Enabled = true;
+            this.txtHapticGunPortNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHapticGunPortNumber.Location = new System.Drawing.Point(252, 315);
+            this.txtHapticGunPortNumber.Name = "txtHapticGunPortNumber";
+            this.txtHapticGunPortNumber.Size = new System.Drawing.Size(100, 23);
+            this.txtHapticGunPortNumber.TabIndex = 12;
+            this.txtHapticGunPortNumber.Text = Properties.Settings.Default.HapticGunPortNumber.ToString();
+            // 
+            // btnSaveHapticGunIpAddress
+            // 
+            this.btnSave.Location = new System.Drawing.Point(358, 315);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSaveHapticGunIpAddress_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 420);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(276, 20);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -162,13 +217,19 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.txtAlyxDirectory);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtHapticGunIpAddress);
+            this.Controls.Add(this.txtHapticGunPortNumber);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(479, 412);
-            this.MinimumSize = new System.Drawing.Size(479, 412);
+            this.MaximumSize = new System.Drawing.Size(479, 500);
+            this.MinimumSize = new System.Drawing.Size(479, 500);
             this.Name = "Form1";
             this.Text = "bHaptics Tactsuit + Haptic Gun Alyx Interface";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -191,6 +252,11 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button btnSettings;
         public System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtHapticGunIpAddress;
+        private System.Windows.Forms.TextBox txtHapticGunPortNumber;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

@@ -9,989 +9,1265 @@
 //------------------------------------------------------------------------------
 
 namespace TactsuitAlyx.Properties {
-    
-    
+
+
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase
+    {
+
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
-        
-        public static Settings Default {
-            get {
+
+        public static Settings Default
+        {
+            get
+            {
                 return defaultInstance;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierDefaultHead {
-            get {
+        public float intensityMultiplierDefaultHead
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierDefaultHead"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierDefaultHead"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedHead {
-            get {
+        public float intensityMultiplierUnarmedHead
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedHead"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedHead"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierGunHead {
-            get {
+        public float intensityMultiplierGunHead
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierGunHead"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierGunHead"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedBloater {
-            get {
+        public float intensityMultiplierUnarmedBloater
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedBloater"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedBloater"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedHeadcrab {
-            get {
+        public float intensityMultiplierUnarmedHeadcrab
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedHeadcrab"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedHeadcrab"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedHeadcrabArmored {
-            get {
+        public float intensityMultiplierUnarmedHeadcrabArmored
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedHeadcrabArmored"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedHeadcrabArmored"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedHeadcrabBlack {
-            get {
+        public float intensityMultiplierUnarmedHeadcrabBlack
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedHeadcrabBlack"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedHeadcrabBlack"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedHeadcrabFast {
-            get {
+        public float intensityMultiplierUnarmedHeadcrabFast
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedHeadcrabFast"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedHeadcrabFast"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedHeadcrabRunner {
-            get {
+        public float intensityMultiplierUnarmedHeadcrabRunner
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedHeadcrabRunner"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedHeadcrabRunner"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedFastZombie {
-            get {
+        public float intensityMultiplierUnarmedFastZombie
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedFastZombie"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedFastZombie"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedPoisonZombie {
-            get {
+        public float intensityMultiplierUnarmedPoisonZombie
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedPoisonZombie"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedPoisonZombie"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedZombie {
-            get {
+        public float intensityMultiplierUnarmedZombie
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedZombie"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedZombie"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedZombieBlind {
-            get {
+        public float intensityMultiplierUnarmedZombieBlind
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedZombieBlind"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedZombieBlind"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedZombine {
-            get {
+        public float intensityMultiplierUnarmedZombine
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedZombine"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedZombine"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedAntlion {
-            get {
+        public float intensityMultiplierUnarmedAntlion
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedAntlion"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedAntlion"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedAntlionGuard {
-            get {
+        public float intensityMultiplierUnarmedAntlionGuard
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedAntlionGuard"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedAntlionGuard"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierUnarmedManhack {
-            get {
+        public float intensityMultiplierUnarmedManhack
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierUnarmedManhack"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierUnarmedManhack"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierGrabbedByBarnacle {
-            get {
+        public float intensityMultiplierGrabbedByBarnacle
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierGrabbedByBarnacle"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierGrabbedByBarnacle"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierConcussionGrenade {
-            get {
+        public float intensityMultiplierConcussionGrenade
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierConcussionGrenade"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierConcussionGrenade"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierBugBaitGrenade {
-            get {
+        public float intensityMultiplierBugBaitGrenade
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierBugBaitGrenade"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierBugBaitGrenade"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierFragGrenade {
-            get {
+        public float intensityMultiplierFragGrenade
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierFragGrenade"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierFragGrenade"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierSpyGrenade {
-            get {
+        public float intensityMultiplierSpyGrenade
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierSpyGrenade"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierSpyGrenade"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierHandGrenade {
-            get {
+        public float intensityMultiplierHandGrenade
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierHandGrenade"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierHandGrenade"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierRollerGrenade {
-            get {
+        public float intensityMultiplierRollerGrenade
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierRollerGrenade"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierRollerGrenade"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierRollerMine {
-            get {
+        public float intensityMultiplierRollerMine
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierRollerMine"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierRollerMine"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierCombine {
-            get {
+        public float intensityMultiplierCombine
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierCombine"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierCombine"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierCombineS {
-            get {
+        public float intensityMultiplierCombineS
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierCombineS"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierCombineS"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierCombineGantry {
-            get {
+        public float intensityMultiplierCombineGantry
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierCombineGantry"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierCombineGantry"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierMetroPolice {
-            get {
+        public float intensityMultiplierMetroPolice
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierMetroPolice"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierMetroPolice"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierSniper {
-            get {
+        public float intensityMultiplierSniper
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierSniper"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierSniper"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierStrider {
-            get {
+        public float intensityMultiplierStrider
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierStrider"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierStrider"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierTurret {
-            get {
+        public float intensityMultiplierTurret
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierTurret"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierTurret"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierEnvironmentExplosion {
-            get {
+        public float intensityMultiplierEnvironmentExplosion
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierEnvironmentExplosion"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierEnvironmentExplosion"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierEnvironmentLaser {
-            get {
+        public float intensityMultiplierEnvironmentLaser
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierEnvironmentLaser"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierEnvironmentLaser"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierEnvironmentFire {
-            get {
+        public float intensityMultiplierEnvironmentFire
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierEnvironmentFire"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierEnvironmentFire"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierEnvironmentSpark {
-            get {
+        public float intensityMultiplierEnvironmentSpark
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierEnvironmentSpark"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierEnvironmentSpark"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierEnvironmentPoison {
-            get {
+        public float intensityMultiplierEnvironmentPoison
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierEnvironmentPoison"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierEnvironmentPoison"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierEnvironmentRadiation {
-            get {
+        public float intensityMultiplierEnvironmentRadiation
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierEnvironmentRadiation"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierEnvironmentRadiation"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierDamageExplosion {
-            get {
+        public float intensityMultiplierDamageExplosion
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierDamageExplosion"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierDamageExplosion"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierDamageLaser {
-            get {
+        public float intensityMultiplierDamageLaser
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierDamageLaser"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierDamageLaser"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierDamageFire {
-            get {
+        public float intensityMultiplierDamageFire
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierDamageFire"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierDamageFire"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierDamageSpark {
-            get {
+        public float intensityMultiplierDamageSpark
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierDamageSpark"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierDamageSpark"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierPlayerShootPistol {
-            get {
+        public float intensityMultiplierPlayerShootPistol
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierPlayerShootPistol"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierPlayerShootPistol"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierPlayerShootShotgun {
-            get {
+        public float intensityMultiplierPlayerShootShotgun
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierPlayerShootShotgun"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierPlayerShootShotgun"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierPlayerShootSMG {
-            get {
+        public float intensityMultiplierPlayerShootSMG
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierPlayerShootSMG"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierPlayerShootSMG"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierPlayerShootDefault {
-            get {
+        public float intensityMultiplierPlayerShootDefault
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierPlayerShootDefault"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierPlayerShootDefault"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierFallbackSMG {
-            get {
+        public float intensityMultiplierFallbackSMG
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierFallbackSMG"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierFallbackSMG"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierPlayerGrenadeLaunch {
-            get {
+        public float intensityMultiplierPlayerGrenadeLaunch
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierPlayerGrenadeLaunch"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierPlayerGrenadeLaunch"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierFallbackPistol {
-            get {
+        public float intensityMultiplierFallbackPistol
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierFallbackPistol"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierFallbackPistol"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierFallbackShotgun {
-            get {
+        public float intensityMultiplierFallbackShotgun
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierFallbackShotgun"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierFallbackShotgun"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierKickbackPistol {
-            get {
+        public float intensityMultiplierKickbackPistol
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierKickbackPistol"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierKickbackPistol"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierKickbackShotgun {
-            get {
+        public float intensityMultiplierKickbackShotgun
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierKickbackShotgun"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierKickbackShotgun"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierKickbackSMG {
-            get {
+        public float intensityMultiplierKickbackSMG
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierKickbackSMG"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierKickbackSMG"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierHeartBeat {
-            get {
+        public float intensityMultiplierHeartBeat
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierHeartBeat"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierHeartBeat"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierHeartBeatFast {
-            get {
+        public float intensityMultiplierHeartBeatFast
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierHeartBeatFast"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierHeartBeatFast"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierHealthPenUse {
-            get {
+        public float intensityMultiplierHealthPenUse
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierHealthPenUse"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierHealthPenUse"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierHealthStationUse {
-            get {
+        public float intensityMultiplierHealthStationUse
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierHealthStationUse"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierHealthStationUse"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierHealthStationUseArm {
-            get {
+        public float intensityMultiplierHealthStationUseArm
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierHealthStationUseArm"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierHealthStationUseArm"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierBackpackStoreClip {
-            get {
+        public float intensityMultiplierBackpackStoreClip
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierBackpackStoreClip"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierBackpackStoreClip"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierBackpackStoreResin {
-            get {
+        public float intensityMultiplierBackpackStoreResin
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierBackpackStoreResin"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierBackpackStoreResin"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierBackpackRetrieveClip {
-            get {
+        public float intensityMultiplierBackpackRetrieveClip
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierBackpackRetrieveClip"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierBackpackRetrieveClip"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierBackpackRetrieveResin {
-            get {
+        public float intensityMultiplierBackpackRetrieveResin
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierBackpackRetrieveResin"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierBackpackRetrieveResin"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierItemHolderStore {
-            get {
+        public float intensityMultiplierItemHolderStore
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierItemHolderStore"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierItemHolderStore"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierItemHolderRemove {
-            get {
+        public float intensityMultiplierItemHolderRemove
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierItemHolderRemove"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierItemHolderRemove"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierGravityGloveLockOn {
-            get {
+        public float intensityMultiplierGravityGloveLockOn
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierGravityGloveLockOn"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierGravityGloveLockOn"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierGravityGlovePull {
-            get {
+        public float intensityMultiplierGravityGlovePull
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierGravityGlovePull"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierGravityGlovePull"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public float intensityMultiplierGravityGloveCatch {
-            get {
+        public float intensityMultiplierGravityGloveCatch
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierGravityGloveCatch"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierGravityGloveCatch"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierClipInserted {
-            get {
+        public float intensityMultiplierClipInserted
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierClipInserted"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierClipInserted"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierChamberedRound {
-            get {
+        public float intensityMultiplierChamberedRound
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierChamberedRound"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierChamberedRound"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierCough {
-            get {
+        public float intensityMultiplierCough
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierCough"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierCough"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierCoughHead {
-            get {
+        public float intensityMultiplierCoughHead
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierCoughHead"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierCoughHead"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public float intensityMultiplierShockOnHand {
-            get {
+        public float intensityMultiplierShockOnHand
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierShockOnHand"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierShockOnHand"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierDefault {
-            get {
+        public float intensityMultiplierDefault
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierDefault"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierDefault"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("900")]
-        public int sleepDurationHeartBeat {
-            get {
+        public int sleepDurationHeartBeat
+        {
+            get
+            {
                 return ((int)(this["sleepDurationHeartBeat"]));
             }
-            set {
+            set
+            {
                 this["sleepDurationHeartBeat"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("450")]
-        public int sleepDurationHeartBeatFast {
-            get {
+        public int sleepDurationHeartBeatFast
+        {
+            get
+            {
                 return ((int)(this["sleepDurationHeartBeatFast"]));
             }
-            set {
+            set
+            {
                 this["sleepDurationHeartBeatFast"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("250")]
-        public int sleepDurationHeartBeatTooFast {
-            get {
+        public int sleepDurationHeartBeatTooFast
+        {
+            get
+            {
                 return ((int)(this["sleepDurationHeartBeatTooFast"]));
             }
-            set {
+            set
+            {
                 this["sleepDurationHeartBeatTooFast"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("780")]
-        public int sleepDurationGrabbityLock {
-            get {
+        public int sleepDurationGrabbityLock
+        {
+            get
+            {
                 return ((int)(this["sleepDurationGrabbityLock"]));
             }
-            set {
+            set
+            {
                 this["sleepDurationGrabbityLock"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("900")]
-        public int sleepDurationBarnacleGrab {
-            get {
+        public int sleepDurationBarnacleGrab
+        {
+            get
+            {
                 return ((int)(this["sleepDurationBarnacleGrab"]));
             }
-            set {
+            set
+            {
                 this["sleepDurationBarnacleGrab"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("2")]
-        public float intensityMultiplierFoliageTurret {
-            get {
+        public float intensityMultiplierFoliageTurret
+        {
+            get
+            {
                 return ((float)(this["intensityMultiplierFoliageTurret"]));
             }
-            set {
+            set
+            {
                 this["intensityMultiplierFoliageTurret"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\Steam\\steamapps\\common\\Half-Life Alyx")]
-        public string AlyxDirectory {
-            get {
+        public string AlyxDirectory
+        {
+            get
+            {
                 return ((string)(this["AlyxDirectory"]));
             }
-            set {
+            set
+            {
                 this["AlyxDirectory"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1500")]
-        public int sleepDurationCoughing {
-            get {
+        public int sleepDurationCoughing
+        {
+            get
+            {
                 return ((int)(this["sleepDurationCoughing"]));
             }
-            set {
+            set
+            {
                 this["sleepDurationCoughing"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string HapticGunIpAddress
+        {
+            get
+            {
+                return ((string)(this["HapticGunIpAddress"]));
+            }
+            set
+            {
+                this["HapticGunIpAddress"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("23")]
+        public int HapticGunPortNumber
+        {
+            get
+            {
+                return ((int)(this["HapticGunPortNumber"]));
+            }
+            set
+            {
+                this["HapticGunPortNumber"] = value;
             }
         }
     }

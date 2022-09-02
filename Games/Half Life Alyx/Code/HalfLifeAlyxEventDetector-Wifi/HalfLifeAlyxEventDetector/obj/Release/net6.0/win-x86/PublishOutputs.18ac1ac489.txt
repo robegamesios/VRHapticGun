@@ -1,8 +1,0 @@
-C:\Users\Alien\Documents\Solla\PUBLISH\HalfLifeAlyxEventDetector.exe
-C:\Users\Alien\Documents\Solla\PUBLISH\HalfLifeAlyxEventDetector.dll
-C:\Users\Alien\Documents\Solla\PUBLISH\HalfLifeAlyxEventDetector.deps.json
-C:\Users\Alien\Documents\Solla\PUBLISH\HalfLifeAlyxEventDetector.runtimeconfig.json
-C:\Users\Alien\Documents\Solla\PUBLISH\HalfLifeAlyxEventDetector.pdb
-C:\Users\Alien\Documents\Solla\PUBLISH\System.CodeDom.dll
-C:\Users\Alien\Documents\Solla\PUBLISH\System.IO.Ports.dll
-C:\Users\Alien\Documents\Solla\PUBLISH\System.Management.dll

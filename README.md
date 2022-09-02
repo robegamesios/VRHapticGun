@@ -98,7 +98,7 @@ The blue light in the esp32 indicates it's connected to wifi.
 # Software:
 I forked a Half Life Alyx Event Detector repo and updated it to work with the gun's ebb.
 
-Repository of BHaptics Half-Life: https://github.com/bhaptics/bhaptics-half-life-alyx
+Repository of BHaptics Half-Life Alyx: https://github.com/bhaptics/bhaptics-half-life-alyx
     
 1. Open `Forms1.cs` and change the following:
 

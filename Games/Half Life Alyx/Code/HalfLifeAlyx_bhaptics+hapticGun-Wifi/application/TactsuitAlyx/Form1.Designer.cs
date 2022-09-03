@@ -85,6 +85,7 @@
             // 
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.Color.Lime;
             this.lblInfo.Location = new System.Drawing.Point(25, 380);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(74, 20);
@@ -115,6 +116,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(25, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(276, 20);
@@ -125,6 +127,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Lime;
             this.label2.Location = new System.Drawing.Point(25, 350);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(421, 20);
@@ -135,6 +138,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(25, 290);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(296, 20);
@@ -148,6 +152,7 @@
             this.txtHapticGunIpAddress.Name = "txtHapticGunIpAddress";
             this.txtHapticGunIpAddress.Size = new System.Drawing.Size(220, 23);
             this.txtHapticGunIpAddress.TabIndex = 11;
+            this.txtHapticGunIpAddress.Text = Properties.Settings.Default.HapticGunIpAddress;
             // 
             // txtHapticGunPortNumber
             // 
@@ -156,14 +161,16 @@
             this.txtHapticGunPortNumber.Name = "txtHapticGunPortNumber";
             this.txtHapticGunPortNumber.Size = new System.Drawing.Size(100, 23);
             this.txtHapticGunPortNumber.TabIndex = 12;
+            this.txtHapticGunPortNumber.Text = Properties.Settings.Default.HapticGunPortNumber.ToString();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(25, 420);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.Size = new System.Drawing.Size(22, 13);
             this.label4.TabIndex = 14;
             // 
             // btnSave
@@ -204,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(463, 461);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnSettings);

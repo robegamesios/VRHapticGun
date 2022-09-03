@@ -52,9 +52,9 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(125, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(75, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(191, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(305, 50);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -131,6 +131,51 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Make sure you run the game with launch option -condebug";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(25, 290);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(296, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Haptic Gun IP Address and Port Number";
+            // 
+            // txtHapticGunIpAddress
+            // 
+            this.txtHapticGunIpAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHapticGunIpAddress.Location = new System.Drawing.Point(29, 315);
+            this.txtHapticGunIpAddress.Name = "txtHapticGunIpAddress";
+            this.txtHapticGunIpAddress.Size = new System.Drawing.Size(220, 23);
+            this.txtHapticGunIpAddress.TabIndex = 11;
+            // 
+            // txtHapticGunPortNumber
+            // 
+            this.txtHapticGunPortNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHapticGunPortNumber.Location = new System.Drawing.Point(252, 315);
+            this.txtHapticGunPortNumber.Name = "txtHapticGunPortNumber";
+            this.txtHapticGunPortNumber.Size = new System.Drawing.Size(100, 23);
+            this.txtHapticGunPortNumber.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 420);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.TabIndex = 14;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(358, 315);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSaveHapticGunIpAddress_Click);
+            // 
             // btnSettings
             // 
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -154,63 +199,13 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(25, 290);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(276, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Haptic Gun IP Address and Port Number";
-            // 
-            // txtHapticGunIpAddress
-            // 
-            this.txtHapticGunIpAddress.Enabled = true;
-            this.txtHapticGunIpAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHapticGunIpAddress.Location = new System.Drawing.Point(29, 315);
-            this.txtHapticGunIpAddress.Name = "txtHapticGunIpAddress";
-            this.txtHapticGunIpAddress.Size = new System.Drawing.Size(220, 23);
-            this.txtHapticGunIpAddress.TabIndex = 11;
-            this.txtHapticGunIpAddress.Text = Properties.Settings.Default.HapticGunIpAddress;
-            // 
-            // txtHapticGunPortNumber
-            // 
-            this.txtHapticGunPortNumber.Enabled = true;
-            this.txtHapticGunPortNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHapticGunPortNumber.Location = new System.Drawing.Point(252, 315);
-            this.txtHapticGunPortNumber.Name = "txtHapticGunPortNumber";
-            this.txtHapticGunPortNumber.Size = new System.Drawing.Size(100, 23);
-            this.txtHapticGunPortNumber.TabIndex = 12;
-            this.txtHapticGunPortNumber.Text = Properties.Settings.Default.HapticGunPortNumber.ToString();
-            // 
-            // btnSaveHapticGunIpAddress
-            // 
-            this.btnSave.Location = new System.Drawing.Point(358, 315);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSaveHapticGunIpAddress_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 420);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(276, 20);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(463, 373);
+            this.ClientSize = new System.Drawing.Size(463, 461);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.label2);
@@ -221,7 +216,6 @@
             this.Controls.Add(this.txtHapticGunIpAddress);
             this.Controls.Add(this.txtHapticGunPortNumber);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.btnStop);

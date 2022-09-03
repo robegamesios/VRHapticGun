@@ -499,6 +499,9 @@ namespace TactsuitAlyx
         {
             if (txtHapticGunIpAddress.Text.Length < 6)
                 return;
+            if (txtHapticGunPortNumber.Text.Length == 0)
+                return;
+
             Properties.Settings.Default.HapticGunPortNumber = Int32.Parse(txtHapticGunPortNumber.Text); 
             Properties.Settings.Default.HapticGunIpAddress = txtHapticGunIpAddress.Text;
             Properties.Settings.Default.Save();

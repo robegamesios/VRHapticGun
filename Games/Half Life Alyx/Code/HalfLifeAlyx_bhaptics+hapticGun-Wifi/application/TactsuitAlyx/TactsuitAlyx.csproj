@@ -335,6 +335,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bhaptics-logo.ico" />
     <Content Include="bhaptics.ico" />
     <Content Include="Windows Logo.png" />
   </ItemGroup>

@@ -240,31 +240,30 @@ namespace TactsuitAlyx
             {
                 case FeedbackType.PlayerShootPistol:
                     return FeedbackType.PlayerShootPistolLeft;
-                    break;
+
                 case FeedbackType.PlayerShootShotgun:
                     return FeedbackType.PlayerShootShotgunLeft;
-                    break;
+
                 case FeedbackType.PlayerShootSMG:
                     return FeedbackType.PlayerShootSMGLeft;
-                    break;
+
                 case FeedbackType.PlayerShootPistolLeft:
                     return FeedbackType.PlayerShootPistol;
-                    break;
+
                 case FeedbackType.PlayerShootShotgunLeft:
                     return FeedbackType.PlayerShootShotgun;
-                    break;
+
                 case FeedbackType.PlayerShootSMGLeft:
+
                     return FeedbackType.PlayerShootSMG;
-                    break;
                 case FeedbackType.PlayerShootDefault:
+
                     return FeedbackType.PlayerShootDefaultLeft;
-                    break;
                 case FeedbackType.PlayerShootDefaultLeft:
+
                     return FeedbackType.PlayerShootDefault;
-                    break;
                 default:
                     return FeedbackType.NoFeedback;
-                    break;
             }
 
             return FeedbackType.NoFeedback;
@@ -276,31 +275,31 @@ namespace TactsuitAlyx
             {
                 case FeedbackType.PlayerShootPistol:
                     return leftHanded ? FeedbackType.FallbackPistolLeft : FeedbackType.FallbackPistol;
-                    break;
+                    
                 case FeedbackType.PlayerShootShotgun:
                     return leftHanded ? FeedbackType.FallbackShotgunLeft : FeedbackType.FallbackShotgun;
-                    break;
+                    
                 case FeedbackType.PlayerShootSMG:
                     return leftHanded ? FeedbackType.FallbackSMGLeft : FeedbackType.FallbackSMG;
-                    break;
+                    
                 case FeedbackType.PlayerShootPistolLeft:
                     return leftHanded ? FeedbackType.FallbackPistolLeft : FeedbackType.FallbackPistol;
-                    break;
+                    
                 case FeedbackType.PlayerShootShotgunLeft:
                     return leftHanded ? FeedbackType.FallbackShotgunLeft : FeedbackType.FallbackShotgun;
-                    break;
+                    
                 case FeedbackType.PlayerShootSMGLeft:
                     return leftHanded ? FeedbackType.FallbackSMGLeft : FeedbackType.FallbackSMG;
-                    break;
+                    
                 case FeedbackType.PlayerShootDefault:
                     return leftHanded ? FeedbackType.FallbackPistolLeft : FeedbackType.FallbackPistol;
-                    break;
+                    
                 case FeedbackType.PlayerShootDefaultLeft:
                     return leftHanded ? FeedbackType.FallbackPistolLeft : FeedbackType.FallbackPistol;
-                    break;
+                    
                 default:
                     return FeedbackType.NoFeedback;
-                    break;
+                    
             }
 
             return FeedbackType.NoFeedback;
@@ -312,37 +311,37 @@ namespace TactsuitAlyx
             {
                 case FeedbackType.PlayerShootPistol:
                     return leftHanded ? FeedbackType.KickbackPistolLeft : FeedbackType.KickbackPistol;
-                    break;
+                    
                 case FeedbackType.PlayerShootShotgun:
                     return leftHanded ? FeedbackType.KickbackShotgunLeft : FeedbackType.KickbackShotgun;
-                    break;
+                    
                 case FeedbackType.PlayerShootSMG:
                     return leftHanded ? FeedbackType.KickbackSMGLeft : FeedbackType.KickbackSMG;
-                    break;
+                    
                 case FeedbackType.PlayerGrenadeLaunch:
                     return leftHanded ? FeedbackType.KickbackPistolLeft : FeedbackType.KickbackPistol;
-                    break;
+                    
                 case FeedbackType.PlayerShootDefault:
                     return leftHanded ? FeedbackType.KickbackPistolLeft : FeedbackType.FallbackPistol;
-                    break;
+                    
                 case FeedbackType.PlayerShootPistolLeft:
                     return leftHanded ? FeedbackType.KickbackPistolLeft : FeedbackType.KickbackPistol;
-                    break;
+                    
                 case FeedbackType.PlayerShootShotgunLeft:
                     return leftHanded ? FeedbackType.KickbackShotgunLeft : FeedbackType.KickbackShotgun;
-                    break;
+                    
                 case FeedbackType.PlayerShootSMGLeft:
                     return leftHanded ? FeedbackType.KickbackSMGLeft : FeedbackType.KickbackSMG;
-                    break;
+                    
                 case FeedbackType.PlayerGrenadeLaunchLeft:
                     return leftHanded ? FeedbackType.KickbackPistolLeft : FeedbackType.KickbackPistol;
-                    break;
+                    
                 case FeedbackType.PlayerShootDefaultLeft:
                     return leftHanded ? FeedbackType.KickbackPistolLeft : FeedbackType.FallbackPistol;
-                    break;
+                    
                 default:
                     return leftHanded ? FeedbackType.KickbackPistolLeft : FeedbackType.FallbackPistol;
-                    break;
+                    
             }
 
             return leftHanded ? FeedbackType.KickbackPistolLeft : FeedbackType.FallbackPistol;
@@ -356,10 +355,10 @@ namespace TactsuitAlyx
                 case "hlvr_weapon_crowbar_physics":
                 case "hlvr_weapon_energygun":
                     return leftHanded ? FeedbackType.PlayerShootPistolLeft : FeedbackType.PlayerShootPistol;
-                    break;
+                   
                 case "hlvr_weapon_shotgun":
                     return leftHanded ? FeedbackType.PlayerShootShotgunLeft : FeedbackType.PlayerShootShotgun;
-                    break;
+                   
                 case "hlvr_weapon_rapidfire":
                 case "hlvr_weapon_rapidfire_ammo_capsule":
                 case "hlvr_weapon_rapidfire_bullets_manager":
@@ -369,10 +368,10 @@ namespace TactsuitAlyx
                 case "hlvr_weapon_rapidfire_tag_marker":
                 case "hlvr_weapon_rapidfire_upgrade_model":
                     return leftHanded ? FeedbackType.PlayerShootSMGLeft : FeedbackType.PlayerShootSMG;
-                    break;
+                   
                 default:
                     return leftHanded ? FeedbackType.PlayerShootDefaultLeft : FeedbackType.PlayerShootDefault;
-                    break;
+                   
             }
 
             return leftHanded ? FeedbackType.PlayerShootDefaultLeft : FeedbackType.PlayerShootDefault;
@@ -429,79 +428,79 @@ namespace TactsuitAlyx
             {
                 case "npc_headcrab":
                     return FeedbackType.UnarmedHeadcrab;
-                    break;
+                    
                 case "npc_headcrab_armored":
                     return FeedbackType.UnarmedHeadcrabArmored;
-                    break;
+                    
                 case "npc_headcrab_black":
                     return FeedbackType.UnarmedHeadcrabBlack;
-                    break;
+                    
                 case "npc_headcrab_fast":
                     return FeedbackType.UnarmedHeadcrabFast;
-                    break;
+                    
                 case "npc_headcrab_runner":
                     return FeedbackType.UnarmedHeadcrabRunner;
-                    break;
+                    
                 case "npc_fastzombie":
                     return FeedbackType.UnarmedFastZombie;
-                    break;
+                    
                 case "npc_poisonzombie":
                     return FeedbackType.UnarmedPoisonZombie;
-                    break;
+                    
                 case "npc_zombie":
                     return FeedbackType.UnarmedZombie;
-                    break;
+                    
                 case "npc_zombie_blind":
                     return FeedbackType.UnarmedZombieBlind;
-                    break;
+                    
                 case "npc_zombine":
                     return FeedbackType.UnarmedZombine;
-                    break;
+                    
                 case "npc_manhack":
                     return FeedbackType.UnarmedManhack;
-                    break;
+                    
                 case "npc_antlion":
                     return FeedbackType.UnarmedAntlion;
-                    break;
+                    
                 case "npc_antlionguard":
                 case "npc_barnacle":
                 case "npc_barnacle_tongue_tip":
                     return FeedbackType.UnarmedAntlionGuard;
-                    break;
+                    
                 case "xen_foliage_bloater":
                     return FeedbackType.UnarmedBloater;
-                    break;
+                    
                 case "env_explosion":
                     return FeedbackType.DamageExplosion;
-                    break;
+                    
                 case "env_fire":
                     return FeedbackType.DamageFire;
-                    break;
+                    
                 case "env_laser":
                     return FeedbackType.DamageLaser;
-                    break;
+                    
                 case "env_physexplosion":
                     return FeedbackType.DamageExplosion;
-                    break;
+                    
                 case "env_physimpact":
                     return FeedbackType.DamageExplosion;
-                    break;
+                    
                 case "env_spark":
                     return FeedbackType.DamageSpark;
-                    break;
-                case "npc_combine": return FeedbackType.Combine; break;
-                case "npc_combine_s": return FeedbackType.CombineS; break;
-                case "npc_metropolice": return FeedbackType.MetroPolice; break;
-                case "npc_sniper": return FeedbackType.Sniper; break;
-                case "npc_strider": return FeedbackType.Strider; break;
-                case "npc_hunter": return FeedbackType.DamageExplosion; break;
-                case "npc_hunter_invincible": return FeedbackType.DamageExplosion; break;
-                case "npc_turret_ceiling": return FeedbackType.Turret; break;
-                case "npc_turret_ceiling_pulse": return FeedbackType.Turret; break;
-                case "npc_turret_citizen": return FeedbackType.Turret; break;
-                case "npc_turret_floor": return FeedbackType.Turret; break;
-                case "xen_foliage_turret": return FeedbackType.FoliageTurret; break;
-                case "xen_foliage_turret_projectile": return FeedbackType.FoliageTurret; break;
+                    
+                case "npc_combine": return FeedbackType.Combine;
+                case "npc_combine_s": return FeedbackType.CombineS;
+                case "npc_metropolice": return FeedbackType.MetroPolice;
+                case "npc_sniper": return FeedbackType.Sniper;
+                case "npc_strider": return FeedbackType.Strider;
+                case "npc_hunter": return FeedbackType.DamageExplosion;
+                case "npc_hunter_invincible": return FeedbackType.DamageExplosion;
+                case "npc_turret_ceiling": return FeedbackType.Turret;
+                case "npc_turret_ceiling_pulse": return FeedbackType.Turret;
+                case "npc_turret_citizen": return FeedbackType.Turret;
+                case "npc_turret_floor": return FeedbackType.Turret;
+                case "xen_foliage_turret": return FeedbackType.FoliageTurret;
+                case "xen_foliage_turret_projectile": return FeedbackType.FoliageTurret;
             }
 
             if (enemy == "prop_physics" && enemyName.Contains("grenade"))

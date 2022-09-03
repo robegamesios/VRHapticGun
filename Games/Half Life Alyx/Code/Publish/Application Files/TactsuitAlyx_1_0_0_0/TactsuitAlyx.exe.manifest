@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="TactsuitAlyx.exe" version="1.0.0.0" publicKeyToken="1a15092054aa5ad0" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="bhaptics.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TactsuitAlyx" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="TactsuitAlyx.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.WindowsAPICodePack.dll" size="105984">
+      <assemblyIdentity name="Microsoft.WindowsAPICodePack" version="1.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>e4g4i4Nn8Nhz0OO2b1M4acJONG+28LLGx4P5McyaFjE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.WindowsAPICodePack.ExtendedLinguisticServices.dll" size="27136">
+      <assemblyIdentity name="Microsoft.WindowsAPICodePack.ExtendedLinguisticServices" version="1.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>S+VI1QXXnkQZpWUyPqS21n7BSXuOdQ+sZqouA16GULE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.WindowsAPICodePack.Sensors.dll" size="46080">
+      <assemblyIdentity name="Microsoft.WindowsAPICodePack.Sensors" version="1.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>dxWIaDtcazvNCP6hR3Uzd2Ypvvb1H/cOKldBN5KjTG0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.WindowsAPICodePack.Shell.dll" size="542720">
+      <assemblyIdentity name="Microsoft.WindowsAPICodePack.Shell" version="1.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>ql2AzcDaUpcAMTCbRX4+P9UFuxrBP7eYAdFb+7SnALI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.WindowsAPICodePack.ShellExtensions.dll" size="35840">
+      <assemblyIdentity name="Microsoft.WindowsAPICodePack.ShellExtensions" version="1.1.0.0" publicKeyToken="31BF3856AD364E35" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DuNdyimPq6sY2x4k738QYq6uDHEZo428J6iZpomIImk=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TactsuitAlyx.exe" size="549328">
+      <assemblyIdentity name="TactsuitAlyx" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>fPBiZ/PRcHy4hNMA7ooNioECJ0tZlA10xa4JQic4qvU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="bhaptics.ico" size="104744">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>P0EsQWvsJYHFjLkm9Ut+4Vmgr8Ku7fAd0FCY1gc8eQQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Bhaptics-logo.ico" size="104744">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>P0EsQWvsJYHFjLkm9Ut+4Vmgr8Ku7fAd0FCY1gc8eQQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="TactsuitAlyx.exe.config" size="12377">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WKnOdntcOpYrr5mxQw5j6zES1M+aNT5HyqQLql9wRjc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Windows Logo.png" size="6938">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>S9upko6ubO1C7AArbZ7wW+xKH9VdNDNzRQ+YkCmw64o=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=ALIENWARER10\Alien" issuerKeyHash="e5486a2c1281b3591aef888d1a5596f3c33f4b12" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>IwJwK70OzndmOUaGIc/sb2j+0YOLZ8zynOc54uBif0I=</DigestValue></Reference></SignedInfo><SignatureValue>phQZGfobuC3Wf8Enjxs6nAqQGMbd4MCUlSPcrJAJeGo0pFFrl/iNhNdERz1i3RB82pNB+/D1Cwm7XE8TCQhOQ9NNdxlygCy9qEd4nxIX2IjL8tUQig8gWzjpQ0GXK8IKT7xeEcR3F/IWTySe3khDVlwRPIooiBzMAvS6bHE/Jeo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>tOV5YcNleOL0ajdtp24imebpM5e+/SPTr1NkfQzY++JzMDuGxgKPm3BVKje16bS61Z4i3QeeQ5F3r/lyMWeHutetXXFrxygcjJK7DUqIepbR4d8dOesN+YqAoLeoA6edh2zuFeMU67JsIo8QCSY5b4hxdhjPVrCM6Qlw56LszGU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="427f62e0e239e79cf2cc678b83d1fe686feccf218646396677ce0ebd2b700223" Description="" Url=""><as:assemblyIdentity name="TactsuitAlyx.exe" version="1.0.0.0" publicKeyToken="1a15092054aa5ad0" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=ALIENWARER10\Alien</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>CrR3l8RV08hKSE2sSjHy9PrFFSJlHAcKw41gZs41tvw=</DigestValue></Reference></SignedInfo><SignatureValue>fpDHb38kr/1H0HFSqwKTztUn+SguV4MFmkWqUBQzRSQuvwG7Eujvs00RUgcNDbUXfNDNftJHJVtF0l64+nUCH/cxU3Vc/HipL8VBwE3xfKZcMve1w3MxddDj0xv4QZyZTE0zqyWEkamuERQZsVti8+P1I6le0vbAfaEpOsSr5KI=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>tOV5YcNleOL0ajdtp24imebpM5e+/SPTr1NkfQzY++JzMDuGxgKPm3BVKje16bS61Z4i3QeeQ5F3r/lyMWeHutetXXFrxygcjJK7DUqIepbR4d8dOesN+YqAoLeoA6edh2zuFeMU67JsIo8QCSY5b4hxdhjPVrCM6Qlw56LszGU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB4TCCAUqgAwIBAgIQGahicH9j+aJMnwSWb1xdnTANBgkqhkiG9w0BAQsFADAvMS0wKwYDVQQDHiQAQQBMAEkARQBOAFcAQQBSAEUAUgAxADAAXABBAGwAaQBlAG4wHhcNMjIwOTAzMDAzODM3WhcNMjMwOTAzMDYzODM3WjAvMS0wKwYDVQQDHiQAQQBMAEkARQBOAFcAQQBSAEUAUgAxADAAXABBAGwAaQBlAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALTleWHDZXji9Go3baduIpnm6TOXvv0j069TZH0M2PviczA7hsYCj5twVSo3tem0utWeIt0HnkORd6/5cjFnh7rXrV1xa8coHIySuw1KiHqW0eHfHTnrDfmKgKC3qAOnnYds7hXjFOuybCKPEAkmOW+IcXYYz1awjOkJcOei7MxlAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAej36GPaA3wEbS22wt17TjaQ81liQqc3qpx1jrHjpyeyIwa8UpArygy6W9xEFaypXdUgLubmvOgN28ejRI9+Qbm+95nYfwHmbsrqDsXhsIm2VUAjaZ/Z8AqqI/ywRzFlVBqsY3t9owPDnu0/nMaYRzWmwRTN7Dse+LtWISnZapJ8=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

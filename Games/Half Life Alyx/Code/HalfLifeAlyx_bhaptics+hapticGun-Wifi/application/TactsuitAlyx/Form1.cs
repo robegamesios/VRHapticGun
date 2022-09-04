@@ -412,7 +412,24 @@ namespace TactsuitAlyx
             string scriptPath = txtAlyxDirectory.Text + "\\game\\hlvr\\scripts\\vscripts\\tactsuit.lua";
             if (!File.Exists(scriptPath))
             {
-                MessageBox.Show("Script file installation is not correct. Please read the instructions on the mod page and reinstall.", "Script Installation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Script file installation is not correct. Will try to install. Click Start button again", "Script Installation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                string sourceFile = Path.GetDirectoryName(Application.ExecutablePath) + "\\copyScripts\\vscripts\\tactsuit.lua";
+                string destPath = "\\game\\hlvr\\scripts\\vscripts";
+                string filename = "\\tactsuit.lua";
+                string destFile = txtAlyxDirectory.Text + destPath + filename;
+
+                Console.Write("create vscripts directory if needed");
+                Console.WriteLine(txtAlyxDirectory.Text + destPath);
+                Directory.CreateDirectory(txtAlyxDirectory.Text + destPath);
+
+                if (Directory.Exists(destPath))
+                {
+                    Console.WriteLine("copying tactsuit.lua to vscripts folder");
+                    System.IO.File.Copy(sourceFile, destFile, true);
+                }
+
+
                 return;
             }
             string scriptLoaderPath = txtAlyxDirectory.Text + "\\game\\hlvr\\cfg\\skill_manifest.cfg";
@@ -440,7 +457,7 @@ namespace TactsuitAlyx
             try
             {
                 tcpclnt = new TcpClient();
-            
+
                 if (txtHapticGunIpAddress.Text != "" && txtHapticGunPortNumber.Text != "")
                 {
                     Console.WriteLine("Connecting.....");

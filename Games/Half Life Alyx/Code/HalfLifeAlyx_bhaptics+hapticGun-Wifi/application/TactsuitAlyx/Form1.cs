@@ -446,11 +446,13 @@ namespace TactsuitAlyx
                     Console.WriteLine("Connecting.....");
 
                     //Change this to use the ip address of your esp32
-                    tcpclnt.Connect(Properties.Settings.Default.HapticGunIpAddress, Properties.Settings.Default.HapticGunPortNumber); //23 is your port number. Change this to match the port number you specified in the esp32 code
+                    tcpclnt.Connect(txtHapticGunIpAddress.Text, Int32.Parse(txtHapticGunPortNumber.Text)); //23 is your port number. Change this to match the port number you specified in the esp32 code
+                    saveHapticGunIpAddress();
                 }
             }
             catch (Exception err)
             {
+                clearHapticGunIpAddress();
                 label4.Text = "Haptic Gun Connection error: check IP Address, Port Number, and the gun is turned ON";
                 Console.WriteLine("Error..... " + err.StackTrace);
             }
@@ -495,7 +497,7 @@ namespace TactsuitAlyx
             }
         }
 
-        private void btnSaveHapticGunIpAddress_Click(object sender, EventArgs e)
+        private void saveHapticGunIpAddress()
         {
             if (txtHapticGunIpAddress.Text.Length < 6)
                 return;
@@ -504,6 +506,13 @@ namespace TactsuitAlyx
 
             Properties.Settings.Default.HapticGunPortNumber = Int32.Parse(txtHapticGunPortNumber.Text); 
             Properties.Settings.Default.HapticGunIpAddress = txtHapticGunIpAddress.Text;
+            Properties.Settings.Default.Save();
+        }
+
+        private void clearHapticGunIpAddress()
+        {
+            txtHapticGunIpAddress.Text = "";
+            Properties.Settings.Default.HapticGunIpAddress = "";
             Properties.Settings.Default.Save();
         }
 

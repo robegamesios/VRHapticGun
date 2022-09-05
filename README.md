@@ -124,8 +124,7 @@ NOTE: This app will work with the Haptic Gun even if you do not have BHaptics ge
     
 # TODOs
 
-1. Add a GUI so you can enter IP address before running the game.
-2. Detect when you disconnect/reconnect the gun grip from the gun. Then in the game, the weapon will automatically get removed (show only the hand) or automatically switch to the last weapon selected when reconnected.
+1. Detect when you disconnect/reconnect the gun grip from the gun. Then in the game, the weapon will automatically get removed (show only the hand) or automatically switch to the last weapon selected when reconnected.
 
 # Repository of BHaptics Half-Life Alyx:
 https://github.com/bhaptics/bhaptics-half-life-alyx

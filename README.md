@@ -100,22 +100,23 @@ I forked a Half Life Alyx Event Detector repo and updated it to work with the gu
 
 Repository of BHaptics Half-Life Alyx: https://github.com/bhaptics/bhaptics-half-life-alyx
     
-1. Open `Forms1.cs` and change the following:
-
-    in Line 441:
-
-        //Change this to use the ip address of your esp32
-        tcpclnt.Connect("esp32IPAddress", 23); //23 is your port number. Change this to match the port number you specified in the esp32 code
+1. In the Publish Folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/Half%20Life%20Alyx/Code/Publish, download and unzip `Tactsuit+Gun_Alyx.zip`.
                 
-2. Turn on the gun and go ahead and run the program.
+2. Turn on the gun and go ahead and run `TactsuitAlyx.exe`.
     
 3. Once `bHaptics Tactsuit + Haptic Gun Alyx Interface` is open:
     
-    a. click Start button - if you have not set the Half-Life Alyx folder, it will ask you to set it. Do this by clicking the `Browse...` button.
+    a. Click the `Browse...` button and select your HLA folder (e.g. `C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx`).
     
-    b. click Test button - if your gun is properly connected, it should activate (trigger fire).
+    b. Enter your gun's IP Address and Port Number (default to Port 23. This should match the port number you used in the esp32 firmware).
     
-    ![bHaptics Tactsuit + Haptic Gun Alyx Interface 9_2_2022 12_38_21 PM](https://user-images.githubusercontent.com/10041871/188225462-cd67f8b0-e22b-402c-8603-498d4a7130eb.png)
+    c. click Start button.
+    
+    d. under the hood, the program will copy `vscripts\tactsuit.lua` to your game directory's vscripts folder (e.g. `C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx\game\hlvr\scripts\vscripts\tactsuit.lua`)
+    
+    e. click Test button - if your gun is properly connected, it should activate (trigger fire).
+    
+    ![image](https://user-images.githubusercontent.com/10041871/188356491-48909ea7-a48f-4082-8d35-7fb5a84dc775.png)
 
 4. Launch SteamVR and start Half-Life Alyx game.
 

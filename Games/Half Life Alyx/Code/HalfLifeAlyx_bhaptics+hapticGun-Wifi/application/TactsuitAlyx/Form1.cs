@@ -410,28 +410,32 @@ namespace TactsuitAlyx
                 return;
             }
             string scriptPath = txtAlyxDirectory.Text + "\\game\\hlvr\\scripts\\vscripts\\tactsuit.lua";
+
+            string sourceFile = Path.GetDirectoryName(Application.ExecutablePath) + "\\copyScripts\\vscripts\\tactsuit.lua";
+            string destPath = "\\game\\hlvr\\scripts\\vscripts";
+            string filename = "\\tactsuit.lua";
+            string destFile = txtAlyxDirectory.Text + destPath + filename;
+
             if (!File.Exists(scriptPath))
             {
-                MessageBox.Show("Script file installation is not correct. Will try to install. Click Start button again", "Script Installation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                string sourceFile = Path.GetDirectoryName(Application.ExecutablePath) + "\\copyScripts\\vscripts\\tactsuit.lua";
-                string destPath = "\\game\\hlvr\\scripts\\vscripts";
-                string filename = "\\tactsuit.lua";
-                string destFile = txtAlyxDirectory.Text + destPath + filename;
-
-                Console.Write("create vscripts directory if needed");
-                Console.WriteLine(txtAlyxDirectory.Text + destPath);
+                //Create vscripts directory, if it exists, this will be ignored
                 Directory.CreateDirectory(txtAlyxDirectory.Text + destPath);
 
                 if (Directory.Exists(destPath))
                 {
-                    Console.WriteLine("copying tactsuit.lua to vscripts folder");
-                    System.IO.File.Copy(sourceFile, destFile, true);
+                    //Copy tactsuit.lua to vscripts folder
+                    File.Copy(sourceFile, destFile, true);
                 }
+            }
 
-
+            //Check again to make sure that vscripts\tactsuit.lua exists, otherwise throw an error message
+            if (!File.Exists(scriptPath))
+            {
+                string errorMessage = "Make sure you selected the correct Half-Life Alyx installation folder. If tactsuit.lua does not exist, copy it to this path: " + destFile;
+                MessageBox.Show(errorMessage, "Script Installation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             string scriptLoaderPath = txtAlyxDirectory.Text + "\\game\\hlvr\\cfg\\skill_manifest.cfg";
             string configText = File.ReadAllText(scriptLoaderPath);
             if (!configText.Contains("script_reload_code tactsuit.lua"))
@@ -464,8 +468,9 @@ namespace TactsuitAlyx
 
                     //Change this to use the ip address of your esp32
                     tcpclnt.Connect(txtHapticGunIpAddress.Text, Int32.Parse(txtHapticGunPortNumber.Text)); //23 is your port number. Change this to match the port number you specified in the esp32 code
-                    saveHapticGunIpAddress();
                 }
+                //Save IpAddress and Port Number textboxes
+                saveHapticGunIpAddress();
             }
             catch (Exception err)
             {
@@ -516,11 +521,6 @@ namespace TactsuitAlyx
 
         private void saveHapticGunIpAddress()
         {
-            if (txtHapticGunIpAddress.Text.Length < 6)
-                return;
-            if (txtHapticGunPortNumber.Text.Length == 0)
-                return;
-
             Properties.Settings.Default.HapticGunPortNumber = Int32.Parse(txtHapticGunPortNumber.Text); 
             Properties.Settings.Default.HapticGunIpAddress = txtHapticGunIpAddress.Text;
             Properties.Settings.Default.Save();

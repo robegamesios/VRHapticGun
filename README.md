@@ -100,7 +100,7 @@ The blue light in the esp32 indicates it's connected to wifi.
 5. Go ahead and upload the files to your esp32 board. If you are getting an error, you might need to press the boot button in the esp32 while uploading.
 
 # Software: For Half-Life Alyx
-I forked a BHaptics Half-Life Alyx repo and updated it to work with the gun's ebb. Credits goes to them for creating this.
+I forked a BHaptics Half-Life Alyx repo and updated it to work with the gun's ebb. Credits goes to them for creating the original implementation.
 
 Repository of BHaptics Half-Life Alyx: https://github.com/bhaptics/bhaptics-half-life-alyx
     

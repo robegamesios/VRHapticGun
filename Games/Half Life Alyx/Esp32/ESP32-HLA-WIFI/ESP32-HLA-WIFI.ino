@@ -1,11 +1,24 @@
+#define ESP_DRD_USE_EEPROM      false
+#define ESP_DRD_USE_SPIFFS      true    //false
+#define DOUBLERESETDETECTOR_DEBUG       true  //false
+
+#include <ESP_DoubleResetDetector.h>  
 #include <WiFi.h>
 #include <HTTPClient.h>
+#include <WiFiManager.h>
+
+// Number of seconds after reset during which a
+// subseqent reset will be considered a double reset.
+#define DRD_TIMEOUT 10
+
+// RTC Memory Address for the DoubleResetDetector to use
+#define DRD_ADDRESS 0
+
+DoubleResetDetector* drd;
 
 int LED_BUILTIN = 2; //this is the blue led on the esp32 that lights up when connected to WIFI
 int PIN_MOTOR = 23; //this is the signal pin connected to the esp32
 
-const char* ssid = "YourWifiSSID"; //change this to your WIFI SSID
-const char* password = "YourWifiPassword"; //change this to your WIFI password
 const uint ServerPort = 23; //23 is your port number. Change this to match the port number you specified in Programs.cs file
 WiFiServer Server(ServerPort);
 WiFiClient RemoteClient;
@@ -49,10 +62,30 @@ void EchoReceivedData()
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode (PIN_MOTOR, OUTPUT);//Specify that PIN MOTOR is output
-  
+
+  //setup wifi
+  WiFi.mode(WIFI_STA); // explicitly set mode, esp defaults to STA+AP    
   Serial.begin(115200);
+
+  WiFiManager wm;
+
+  drd = new DoubleResetDetector(DRD_TIMEOUT, DRD_ADDRESS);
+
+  if (drd->detectDoubleReset())
+  {
+    Serial.println("Double Reset Detected");
+    digitalWrite(LED_BUILTIN, LOW);
+    wm.resetSettings();
+  }
+  else
+  {
+    Serial.println("No Double Reset Detected");
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
   
-  WiFi.begin(ssid, password);
+
+  wm.autoConnect("HapticGun_Connect");
+  
   Serial.println("Connecting");
   while(WiFi.status() != WL_CONNECTED) { 
     delay(500);
@@ -67,6 +100,12 @@ void setup() {
 }
 
 void loop() {
+  // Call the double reset detector loop method every so often,
+  // so that it can recognise when the timeout expires.
+  // You can also call drd.stop() when you wish to no longer
+  // consider the next reset as a double reset.
+  drd->loop();
+    
   if(WiFi.status()== WL_CONNECTED){ 
     CheckForConnections();
     EchoReceivedData();

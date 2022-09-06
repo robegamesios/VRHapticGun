@@ -81,15 +81,11 @@ The blue light in the esp32 indicates it's connected to wifi.
     
     e. Select your ESP32 board from Tools -> Board -> Boards Manager -> ESP32 Dev Module
 
-3. Open `ESP32-HLA-WIFI.ino` file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following:
+3. Open `ESP32-HLA-WIFI.ino` file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following if you want to:
 
-        const char* ssid = "YourWifiSSID"; //change this to your wifi SSID
+        const uint ServerPort = 23; //if you change this port, make sure to match this port number you specify in the companion app.
 
-        const char* password = "YourWifiPassword"; //change this to your wifi password
-
-        const uint ServerPort = 23; //if you change this port, make sure to update the Programs.cs file to match this port
-
-4. In the function `EchoReceivedData()` modify the delay time to fit the timing of your ebb. Mine works at 75 millisecond for 1 firing cycle.
+   In the function `EchoReceivedData()` modify the delay time to fit the timing of your ebb. Mine works at 75 millisecond for 1 firing cycle.
 
         digitalWrite(PIN_MOTOR, HIGH); //This will turn ON the ebb motor
     
@@ -97,8 +93,23 @@ The blue light in the esp32 indicates it's connected to wifi.
     
         digitalWrite(PIN_MOTOR, LOW); //This will turn OFF the ebb motor   
            
-5. Go ahead and upload the files to your esp32 board. If you are getting an error, you might need to press the boot button in the esp32 while uploading.
+4. Go ahead and upload the files to your esp32 board. If you are getting an error, you might need to press the boot button in the esp32 while uploading.
 
+5. Turn On the gun.
+        
+    a. Open up your smartphone (iOS and Android) and go to Wifi Settings
+    
+    b. Connect to `HapticGun_Connect` access point.
+    
+    c. Select or enter your Wifi SSID. Then enter your wifi password.
+    
+    d. Check your esp32, the blue led should light up if the connection was successful.
+    
+    e. If you double click the Reset Button, this will reset the wifi settings, and you will be able to connect to the `HapticGun_Connect` access point again.
+    
+    ![Screen Shot 2022-09-05 at 8 50 41 PM](https://user-images.githubusercontent.com/10041871/188543318-d1873d3b-3fd7-4a06-92f2-d02b00914bff.png)
+
+    
 # Software: For Half-Life Alyx
 I forked a BHaptics Half-Life Alyx repo and updated it to work with the gun's ebb. Credits goes to them for creating the original implementation.
 

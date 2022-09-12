@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OWO</name>
+    </assembly>
+    <members>
+        <member name="P:OWO.OWOController.IsConnected">
+            <summary>
+            Returns true if is connected to the OWO client.
+            </summary>
+        </member>
+        <member name="M:OWO.OWOController.Connect(System.String)">
+            <summary>
+            Returns if the connection with the OWO App was successful.
+            </summary>
+            <param name="_ip"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OWO.OWOController.Disconnect">
+            <summary>
+            Returns if the disconnection with the OWO App was successful.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:OWO.OWOController.AutoConnect">
+            <summary>
+            Search for OWO Apps in the same network to make a connection.
+            </summary>
+        </member>
+        <member name="M:OWO.OWOController.Send(OWO.IOWOSensation,OWO.IOWOMuscle[])">
+            <summary>
+            Stops the current sensation and sends a sensation to several muscles.
+            </summary>
+            <param name="_sensation"></param>
+            <param name="_muscle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OWO.OWOController.Send(OWO.IOWOSensation[],OWO.IOWOMuscle[])">
+            <summary>
+            Stops the current sensation and sends several sensations to several muscles.
+            </summary>
+            <param name="_sensation"></param>
+            <param name="_muscles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OWO.OWOController.ContinueWith(OWO.IOWOSensation,OWO.IOWOMuscle[])">
+            <summary>
+            Sends a sensation to the desired muscles after the current one ends.
+            </summary>
+            <param name="_sensation"></param>
+            <param name="_muscle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OWO.OWOController.ContinueWith(OWO.IOWOSensation[],OWO.IOWOMuscle[])">
+            <summary>
+            Sends several sensations to several muscles after the current one ends.
+            </summary>
+            <param name="_sensation"></param>
+            <param name="_muscles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:OWO.OWOController.StopSensation">
+            <summary>
+            Stops the current sensation.
+            </summary>
+        </member>
+        <member name="M:OWO.OWOMuscleIntensityOverrider.#ctor(OWO.IOWOMuscle,System.Int32)">
+            <summary>
+            Overrides the intensity with which you feel in the defined muscle.
+            </summary>
+            <param name="_muscle"></param>
+            <param name="_intensityPercentage"></param>
+        </member>
+        <member name="F:OWO.OWOSensation.Ball">
+            <summary>
+            new OWOSensation(100, 0.1f, 100);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.Bleed">
+            <summary>
+            new OWOSensation(100, 1.7f, 100, 0, 1400);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.Insects">
+            <summary>
+            new OWOSensation(20, 4f, 100);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.Wind">
+            <summary>
+            new OWOSensation(100, 2.5f, 50);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.Dart">
+            <summary>
+            new OWOSensation(10, 0.1f, 100);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.MachineGunRecoil">
+            <summary>
+            new OWOSensation(11, 1f, 100);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.Punch">
+            <summary>
+            new OWOSensation(100, 0.8f, 100, 0, 400);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.DaggerEntry">
+            <summary>
+            new OWOSensation(60, 0.1f, 100);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.DaggerMovement">
+            <summary>
+            new OWOSensation(100, 2f, 100, 300, 1000);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.FastDriving">
+            <summary>
+            new OWOSensation(16, 1f, 80);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.IdleSpeed">
+            <summary>
+            new OWOSensation(7, 2.5f, 80);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.InsectBites">
+            <summary>
+            new OWOSensation(13, 1f, 100);
+            </summary>
+        </member>
+        <member name="F:OWO.OWOSensation.ShotEntry">
+            <summary>
+            new OWOSensation(30, 0.1f, 100);
+            </summary>
+        </member>
+        <member name="P:OWO.OWOSensation.Shot">
+            <summary>
+            new OWOSensationsChain(new IOWOSensation[] { ShotEntry, Bleed });
+            </summary>
+        </member>
+        <member name="P:OWO.OWOSensation.Dagger">
+            <summary>
+            new OWOSensationsChain(new IOWOSensation[] { DaggerEntry, DaggerMovement });
+            </summary>
+        </member>
+    </members>
+</doc>

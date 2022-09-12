@@ -6,6 +6,8 @@ Full tutorial video: https://www.youtube.com/watch?v=5z2f2qFMsvU
 
 Half-Life Alyx gameplay: https://www.youtube.com/watch?v=Ae00qbjxJs0
 
+Pistol Whip gameplay: https://www.youtube.com/watch?v=IaUro4AgwZc
+
 # Hardware:
 For items 1 and 2, I think any toy gun with electric blowback (ebb) will work including those airsoft guns with ebb. I bought a lot of four RK45 and one SR12 for $50 including shipping from facebook marketplace.
 1. Recoil RK-45 Spitfire laser tag pistol https://www.amazon.com/Recoil-Laser-Combat-Spitfire-Blaster/dp/B071KV9YP1

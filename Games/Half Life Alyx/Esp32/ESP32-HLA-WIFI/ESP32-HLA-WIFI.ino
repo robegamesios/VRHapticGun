@@ -68,7 +68,9 @@ void setup() {
   Serial.begin(115200);
 
   WiFiManager wm;
-
+  
+  //wm.resetSettings(); //incase you need to manually reset the esp32 board for testing
+  
   drd = new DoubleResetDetector(DRD_TIMEOUT, DRD_ADDRESS);
 
   if (drd->detectDoubleReset())

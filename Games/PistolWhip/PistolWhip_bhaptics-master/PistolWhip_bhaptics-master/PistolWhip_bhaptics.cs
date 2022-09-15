@@ -35,7 +35,7 @@ namespace PistolWhip_bhaptics
             {
                 tcpclnt = new TcpClient();
 
-                tcpclnt.Connect("192.168.1.211", 23); //23 is your port number. Change this to match the port number you specified in the esp32 code
+                tcpclnt.Connect("192.168.50.236", 23); //23 is your port number. Change this to match the port number you specified in the esp32 code
 
                 if (tcpclnt.Connected)
                 {

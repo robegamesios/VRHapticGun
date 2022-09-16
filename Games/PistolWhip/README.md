@@ -10,30 +10,17 @@ Repository of Pistol Whip BHaptics: https://github.com/floh-bhaptics/PistolWhip_
     
 1. Install MelonLoader: https://melonwiki.xyz/#/
 
-2. Until I am able to create a better GUI to set the gun's IP address, do this for now:
-  
-   a. Download this repo and Open up `PistolWhip_bhaptics.sln` and go to line 38 and change it to your gun's IP address.
-   
-   <img width="1552" alt="Screen Shot 2022-09-15 at 9 49 10 AM" src="https://user-images.githubusercontent.com/10041871/190464686-703ef215-af6d-49a3-ace2-57436bf08002.png">
+2. Copy the contents of Publish folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/PistolWhip/Publish to your Pistol Whip MelonLoader Mods folder (e.g. C:\\Program Files (x86)\Steam\steamapps\common\Pistol Whip\Mods)
 
+    ![pistolwhipdir](https://user-images.githubusercontent.com/10041871/190724502-3a9425dd-cd33-4dbf-b886-76562df5ec00.png)
 
-   b. Click the Build button to build the solution.
+3. Open `hapticGunConfig.txt` and change the first line to your gun's IP Address. If you changed the Port number in the firmware, then update the second line to the correct port number you are using. Then save and close the file. You only need to do this once until you need to update your gun's IP address and port number.
 
-   c. Go back to the root folder where you downloading this repo, then go to `/bin/Debug` folder. 
-   
-    ![Screenshot (7)](https://user-images.githubusercontent.com/10041871/190505923-fa42d789-01df-4a66-8e84-699fafbefb47.png)
+    ![hapticGunConfig - Notepad 9_16_2022 12_50_57 PM](https://user-images.githubusercontent.com/10041871/190725229-e92ce89f-4fa5-4e4c-b22f-d9e5519afc51.png)
 
-   d. Copy `PistolWhip_bhaptics.dll` to your Pistol Whip MelonLoader Mods folder.
-   
-   ![Screenshot (8)](https://user-images.githubusercontent.com/10041871/190506010-97e066eb-bc5a-4d64-842f-a0082e867fea.png)
-
-3. Launch SteamVR and start Pistol Whip.
+4. Launch SteamVR and start Pistol Whip.
 
 NOTE: This app will work with the Haptic Gun even if you do not have BHaptics gear (tactsuit, tactosy, etc). Likewise, it should work with BHaptics gear without having a Haptic Gun. 
     
-# TODOs
-
-1. Create GUI to configure IP Address instead of opening Visual Studio solution.
-
 # Repository of Pistol Whip BHaptics:
 https://github.com/floh-bhaptics/PistolWhip_bhaptics

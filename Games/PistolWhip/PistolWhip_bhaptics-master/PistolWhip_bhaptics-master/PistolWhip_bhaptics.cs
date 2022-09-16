@@ -9,6 +9,7 @@ using System.Net.Sockets;
 using System;
 using System.Text;
 using System.IO;
+using System.Linq;
 
 namespace PistolWhip_bhaptics
 {
@@ -30,15 +31,24 @@ namespace PistolWhip_bhaptics
             tactsuitVr = new TactsuitVR();
             tactsuitVr.PlaybackHaptics("HeartBeat");
 
+            //Read the hapticGunConfig.txt file to get the ip address and port number settings
+            string basePath = MelonUtils.BaseDirectory;
+            string path = basePath + "\\Mods\\hapticGunConfig.txt";
+            string ipAddress = File.ReadLines(path).First();
+            string port = File.ReadLines(path).Last();
+            int portNumber = Int32.Parse(port);
+
             //Haptic Gun connect to Wifi
             try
             {
                 tcpclnt = new TcpClient();
 
-                tcpclnt.Connect("192.168.50.236", 23); //23 is your port number. Change this to match the port number you specified in the esp32 code
+                tcpclnt.Connect(ipAddress, portNumber); //23 is your port number. Change this to match the port number you specified in the esp32 code
 
                 if (tcpclnt.Connected)
                 {
+                    Console.WriteLine("Connected to: " + ipAddress + " " + portNumber);
+                    
                     Stream stm = (tcpclnt.GetStream());
                     ASCIIEncoding asen = new ASCIIEncoding();
                     byte[] ba = asen.GetBytes("0");

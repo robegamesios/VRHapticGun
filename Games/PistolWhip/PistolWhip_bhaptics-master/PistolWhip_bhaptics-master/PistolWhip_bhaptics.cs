@@ -23,7 +23,8 @@ namespace PistolWhip_bhaptics
         public static bool reloadTrigger = false;
         public static bool justKilled = false;
 
-        public static TcpClient tcpclnt;
+        public static TcpClient tcpclntRight;
+        public static TcpClient tcpclntLeft;
 
         public override void OnApplicationStart()
         {
@@ -34,30 +35,79 @@ namespace PistolWhip_bhaptics
             //Read the hapticGunConfig.txt file to get the ip address and port number settings
             string basePath = MelonUtils.BaseDirectory;
             string path = basePath + "\\Mods\\hapticGunConfig.txt";
-            string ipAddress = File.ReadLines(path).First();
-            string port = File.ReadLines(path).Last();
+
+            //Right haptic gun
+            string ipAddressRight = File.ReadLines(path).First();
+
+            //Port number
+            string port = File.ReadLines(path).ElementAt(1);
             int portNumber = Int32.Parse(port);
 
+            //Left haptic gun
+            string ipAddressLeft = File.ReadLines(path).Last();
+
             //Haptic Gun connect to Wifi
-            try
+            if (ipAddressRight != null)
             {
-                tcpclnt = new TcpClient();
-
-                tcpclnt.Connect(ipAddress, portNumber); //23 is your port number. Change this to match the port number you specified in the esp32 code
-
-                if (tcpclnt.Connected)
+                try
                 {
-                    Console.WriteLine("Connected to: " + ipAddress + " " + portNumber);
-                    
-                    Stream stm = (tcpclnt.GetStream());
-                    ASCIIEncoding asen = new ASCIIEncoding();
-                    byte[] ba = asen.GetBytes("0");
-                    stm.Write(ba, 0, ba.Length);
+                    tcpclntRight = new TcpClient();
+
+                    tcpclntRight.Connect(ipAddressRight, portNumber); //23 is your port number. Change this to match the port number you specified in the esp32 code
+
+                    if (tcpclntRight.Connected)
+                    {
+                        Console.WriteLine("Right Haptic Gun Connected to: " + ipAddressRight + " " + portNumber);
+                        createGunHapticFeedbackRight();
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine("Error Right Haptic Gun..... " + err.StackTrace);
                 }
             }
-            catch (Exception err)
+
+            if (ipAddressLeft != null)
             {
-                Console.WriteLine("Error..... " + err.StackTrace);
+                try
+                {
+                    tcpclntLeft = new TcpClient();
+
+                    tcpclntLeft.Connect(ipAddressLeft, portNumber); //23 is your port number. Change this to match the port number you specified in the esp32 code
+
+                    if (tcpclntLeft.Connected)
+                    {
+                        Console.WriteLine("Left Haptic Gun Connected to: " + ipAddressRight + " " + portNumber);
+                        createGunHapticFeedbackLeft();
+                    }
+                }
+                catch (Exception err)
+                {
+                    Console.WriteLine("Error Left Haptic Gun..... " + err.StackTrace);
+                }
+            }
+        }
+
+        //hapticGun feedback
+        public static void createGunHapticFeedbackRight()
+        {
+            if (tcpclntRight.Connected)
+            {
+                Stream stm = (tcpclntRight.GetStream());
+                ASCIIEncoding asen = new ASCIIEncoding();
+                byte[] ba = asen.GetBytes("0");
+                stm.Write(ba, 0, ba.Length);
+            }
+        }
+
+        public static void createGunHapticFeedbackLeft()
+        {
+            if (tcpclntLeft.Connected)
+            {
+                Stream stm = (tcpclntLeft.GetStream());
+                ASCIIEncoding asen = new ASCIIEncoding();
+                byte[] ba = asen.GetBytes("0");
+                stm.Write(ba, 0, ba.Length);
             }
         }
 
@@ -109,20 +159,22 @@ namespace PistolWhip_bhaptics
                 if (checkIfRightHand(__instance.hand.name))
                 {
                     isRightHand = true;
-                    if (!rightGunHasAmmo) { return; }
+                    if (!rightGunHasAmmo) 
+                    { return; 
+                    } else 
+                    {
+                        PistolWhip_bhaptics.createGunHapticFeedbackRight();
+                    }
                 }
                 else
                 {
                     isRightHand = false;
-                    if (!leftGunHasAmmo) { return; }
-                }
-
-                if (tcpclnt.Connected)
-                {
-                    Stream stm = (tcpclnt.GetStream());
-                    ASCIIEncoding asen = new ASCIIEncoding();
-                    byte[] ba = asen.GetBytes("0");
-                    stm.Write(ba, 0, ba.Length);
+                    if (!leftGunHasAmmo) { 
+                        return; 
+                    } else
+                    {
+                        PistolWhip_bhaptics.createGunHapticFeedbackLeft();
+                    }
                 }
 
                 if (__instance.gunType == 3) { tactsuitVr.ShotgunRecoil(isRightHand); }

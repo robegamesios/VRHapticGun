@@ -28,6 +28,14 @@ Repository of Pistol Whip BHaptics: https://github.com/floh-bhaptics/PistolWhip_
 4. Launch SteamVR and start Pistol Whip.
 
 NOTE: This app will work with the Haptic Gun even if you do not have BHaptics gear (tactsuit, tactosy, etc). Likewise, it should work with BHaptics gear without having a Haptic Gun. 
-    
+
+# Note for Visual Studio:
+
+1. You might need to re-include the reference dll files (Assemby-CSharp.dll, UnityEngine.dll, etc).
+
+2. If it's a Mono game, look for the reference files in the folder "PistolWhip_data/Managed/". 
+
+3. If it's il2cpp, then it will only be available once you run the game with MelonLoader installed, and in "MelonLoader/Managed".
+
 # Repository of Pistol Whip BHaptics:
 https://github.com/floh-bhaptics/PistolWhip_bhaptics

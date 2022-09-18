@@ -13,6 +13,7 @@ Repository of Arizona Sunshine BHaptics: https://github.com/floh-bhaptics/Arizon
 2. Copy the contents of Publish folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/Arizona%20Sunshine/Publish to your Arizona Sunshine MelonLoader Mods folder (e.g. C:\\Program Files (x86)\Steam\steamapps\common\Arizona Sunshine\Mods)
 
 3. Open `hapticGunConfig.txt` 
+
     a. Change the first line to your first Haptic Gun's IP Address.
 
     b. If you changed the Port number in the firmware, then update the second line to the correct port number you are using. 

@@ -8,18 +8,19 @@ I forked a BHaptics Pistol Whip repo and updated it to work with the gun's ebb. 
 
 Repository of Pistol Whip BHaptics: https://github.com/floh-bhaptics/PistolWhip_bhaptics
     
-1. Install MelonLoader: https://melonwiki.xyz/#/
+1. Download and install MelonLoader (and the requirements for it if needed) into the game's directory: https://melonwiki.xyz/#/
 
 2. Copy the contents of Publish folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/PistolWhip/Publish to your Pistol Whip MelonLoader Mods folder (e.g. C:\\Program Files (x86)\Steam\steamapps\common\Pistol Whip\Mods)
 
     ![pistolwhipdir](https://user-images.githubusercontent.com/10041871/190724502-3a9425dd-cd33-4dbf-b886-76562df5ec00.png)
 
 3. Open `hapticGunConfig.txt` 
-    a. Change the first line to your dominant hand (e.g. Right) Gun's IP Address.
+
+    a.  Change the first line to your first Haptic Gun's IP Address.
 
     b. If you changed the Port number in the firmware, then update the second line to the correct port number you are using. 
 
-    c. If you have another Haptic gun you want to use for your non-dominant hand (e.g. Left), change the third line to your non-dominant hand Gun's IP Address. 
+    c. If you have another Haptic gun you want to use, change the third line to your non-dominant hand Gun's IP Address, otherwise leave the third line blank.
 
     d. Save and close the file. You only need to do this once until you need to update your guns' IP address and port number.
 

@@ -23,7 +23,7 @@ Repository of Pistol Whip BHaptics: https://github.com/floh-bhaptics/PistolWhip_
 
     d. Save and close the file. You only need to do this once until you need to update your guns' IP address and port number.
 
-    ![hapticGunConfig - Notepad 9_16_2022 12_50_57 PM](https://user-images.githubusercontent.com/10041871/190725229-e92ce89f-4fa5-4e4c-b22f-d9e5519afc51.png)
+    <img width="794" alt="Screen Shot 2022-09-17 at 9 14 12 PM" src="https://user-images.githubusercontent.com/10041871/190885509-b65afabf-f80d-4dcb-a586-f0d11f521637.png">
 
 4. Launch SteamVR and start Pistol Whip.
 

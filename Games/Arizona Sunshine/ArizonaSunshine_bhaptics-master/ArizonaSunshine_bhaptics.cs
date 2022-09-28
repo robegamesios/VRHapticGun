@@ -188,7 +188,12 @@ namespace ArizonaSunshine_bhaptics
                 bool isRight = (__instance.EquipmentSlot.SlotID == E_EQUIPMENT_SLOT_ID.RIGHT_HAND);
 
                 //hapticGun feedback
-                if (isRight)
+                if (twoHanded)
+                {
+                    ArizonaSunshine_bhaptics.createGunHapticFeedbackRight();
+                    ArizonaSunshine_bhaptics.createGunHapticFeedbackLeft();
+                }
+                else if (isRight)
                 {
                     ArizonaSunshine_bhaptics.createGunHapticFeedbackRight();
                 }

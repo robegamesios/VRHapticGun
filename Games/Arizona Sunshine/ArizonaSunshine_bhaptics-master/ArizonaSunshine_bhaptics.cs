@@ -53,7 +53,7 @@ namespace ArizonaSunshine_bhaptics
 
                     if (tcpclntRight.Connected)
                     {
-                        Console.WriteLine("Right Haptic Gun Connected to: " + ipAddressRight + " " + portNumber);
+                        Console.WriteLine("Right Haptic Gun Connected to: " + path + " " + ipAddressRight + " " + portNumber);
                         createGunHapticFeedbackRight();
                     }
                 }
@@ -73,7 +73,7 @@ namespace ArizonaSunshine_bhaptics
 
                     if (tcpclntLeft.Connected)
                     {
-                        Console.WriteLine("Left Haptic Gun Connected to: " + ipAddressRight + " " + portNumber);
+                        Console.WriteLine("Left Haptic Gun Connected to: " + path + " " + ipAddressLeft + " " + portNumber);
                         createGunHapticFeedbackLeft();
                     }
                 }

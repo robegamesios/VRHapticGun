@@ -25,7 +25,8 @@ namespace TactsuitAlyx
         public TactsuitVR tactsuitVr;
         public Engine engine;
 
-        public static TcpClient tcpclnt;
+        public static TcpClient tcpclntRight;
+        public static TcpClient tcpclntLeft;
 
         private delegate void SafeCallDelegate(string text);
 
@@ -117,10 +118,7 @@ namespace TactsuitAlyx
                     if (splitted.Length > 1)
                     {
                         //Haptic gun send signal to esp32
-                        Stream stm = tcpclnt.GetStream();
-                        ASCIIEncoding asen = new ASCIIEncoding();
-                        byte[] ba = asen.GetBytes("0");
-                        stm.Write(ba, 0, ba.Length);
+                        createGunHapticFeedbackRight();
                         
                         //BHaptics
                         engine.PlayerShoot(splitted[1].Trim());
@@ -158,6 +156,8 @@ namespace TactsuitAlyx
                         int primary = int.Parse(splitted[1].Trim());
                         
                         engine.GrabbityLockStart(primary == 1);
+
+                        createGunHapticFeedbackLeft("1");
                     }
                 }
                 else if (command == "PlayerGrabbityLockStop")
@@ -167,6 +167,8 @@ namespace TactsuitAlyx
                         int primary = int.Parse(splitted[1].Trim());
 
                         engine.GrabbityLockStop(primary == 1);
+
+                        createGunHapticFeedbackLeft("2");
                     }
                 }
                 else if (command == "PlayerGrabbityPull")
@@ -176,6 +178,8 @@ namespace TactsuitAlyx
                         int primary = int.Parse(splitted[1].Trim());
 
                         engine.GrabbityGlovePull(primary == 1);
+
+                        createGunHapticFeedbackLeft("0");
                     }
                 }
                 else if (command == "PlayerGrabbedByBarnacle")
@@ -460,17 +464,35 @@ namespace TactsuitAlyx
             //Haptic Gun connect to Wifi
             try
             {
-                tcpclnt = new TcpClient();
+                tcpclntRight = new TcpClient();
 
                 if (txtHapticGunIpAddress.Text != "" && txtHapticGunPortNumber.Text != "")
                 {
                     Console.WriteLine("Connecting.....");
 
                     //Change this to use the ip address of your esp32
-                    tcpclnt.Connect(txtHapticGunIpAddress.Text, Int32.Parse(txtHapticGunPortNumber.Text)); //23 is your port number. Change this to match the port number you specified in the esp32 code
+                    tcpclntRight.Connect(txtHapticGunIpAddress.Text, Int32.Parse(txtHapticGunPortNumber.Text)); //23 is your port number. Change this to match the port number you specified in the esp32 code
+
+                    if (tcpclntRight.Connected)
+                    {
+                        createGunHapticFeedbackRight();
+                    }
                 }
-                //Save IpAddress and Port Number textboxes
-                saveHapticGunIpAddress();
+
+                if (txtHapticGunIpAddress.Text != "" && txtHapticGunPortNumber.Text != "")
+                {
+                    tcpclntLeft = new TcpClient();
+
+                    //Change this to use the ip address of your esp32
+                    tcpclntLeft.Connect("192.168.50.128", Int32.Parse(txtHapticGunPortNumber.Text)); //23 is your port number. Change this to match the port number you specified in the esp32 code
+
+                    if (tcpclntLeft.Connected)
+                    {
+                        createGunHapticFeedbackLeft("2");
+                    }
+                }
+                    //Save IpAddress and Port Number textboxes
+                    saveHapticGunIpAddress();
             }
             catch (Exception err)
             {
@@ -500,7 +522,7 @@ namespace TactsuitAlyx
             }
 
             //Haptic gun close tcp connection
-            tcpclnt.Close();
+            tcpclntRight.Close();
 
             WriteTextSafe("Stopping...");
         }
@@ -544,7 +566,7 @@ namespace TactsuitAlyx
         {
             if (tactsuitVr != null)
             {
-                string active = ((tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.All)) ? " {All} " : "") + ((tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.Vest)) ? " {Vest} " : "") + ((tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.ForearmR) || tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.Right)) ? " {Right Arm} " : "") + ((tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.ForearmL) || tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.Left)) ? " {Left Arm} " : "") + ((tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.Head)) ? " {Head} " : "") + ((tcpclnt.Connected) ? " {Haptic Gun}" : "");
+                string active = ((tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.All)) ? " {All} " : "") + ((tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.Vest)) ? " {Vest} " : "") + ((tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.ForearmR) || tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.Right)) ? " {Right Arm} " : "") + ((tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.ForearmL) || tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.Left)) ? " {Left Arm} " : "") + ((tactsuitVr.hapticPlayer._activePosition.Contains(PositionType.Head)) ? " {Head} " : "") + ((tcpclntRight.Connected) ? " {Haptic Gun}" : "");
 
                 //string activeDevices = "";
                 //for (int i = 0; i < tactsuitVr.hapticPlayer._activePosition.Count; i++)
@@ -560,13 +582,8 @@ namespace TactsuitAlyx
                     active = "{None}";
 
                 //Send signal to Haptic gun
-                if (tcpclnt.Connected)
-                {
-                    Stream stm = tcpclnt.GetStream();
-                    ASCIIEncoding asen = new ASCIIEncoding();
-                    byte[] ba = asen.GetBytes("0");
-                    stm.Write(ba, 0, ba.Length);
-                }
+                createGunHapticFeedbackRight();
+                createGunHapticFeedbackLeft("2");
 
                 WriteTextSafe("Active devices: " + active);
 
@@ -594,6 +611,28 @@ namespace TactsuitAlyx
         private void Form1_Load(object sender, EventArgs e)
         {
             txtAlyxDirectory.Text = Properties.Settings.Default.AlyxDirectory;
+        }
+
+        //hapticGun feedback
+        public static void createGunHapticFeedbackRight()
+        {
+            if (tcpclntRight.Connected)
+            {
+                Stream stm = (tcpclntRight.GetStream());
+                ASCIIEncoding asen = new ASCIIEncoding();
+                byte[] ba = asen.GetBytes("a");
+                stm.Write(ba, 0, ba.Length);
+            }
+        }
+        public static void createGunHapticFeedbackLeft(string delayTime)
+        {
+            if (tcpclntLeft.Connected)
+            {
+                Stream stm = (tcpclntLeft.GetStream());
+                ASCIIEncoding asen = new ASCIIEncoding();
+                byte[] ba = asen.GetBytes(delayTime);
+                stm.Write(ba, 0, ba.Length);
+            }
         }
     }
 }

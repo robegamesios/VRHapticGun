@@ -95,7 +95,7 @@ namespace PistolWhip_bhaptics
             {
                 Stream stm = (tcpclntRight.GetStream());
                 ASCIIEncoding asen = new ASCIIEncoding();
-                byte[] ba = asen.GetBytes("0");
+                byte[] ba = asen.GetBytes("2");
                 stm.Write(ba, 0, ba.Length);
             }
         }
@@ -106,7 +106,7 @@ namespace PistolWhip_bhaptics
             {
                 Stream stm = (tcpclntLeft.GetStream());
                 ASCIIEncoding asen = new ASCIIEncoding();
-                byte[] ba = asen.GetBytes("0");
+                byte[] ba = asen.GetBytes("2");
                 stm.Write(ba, 0, ba.Length);
             }
         }

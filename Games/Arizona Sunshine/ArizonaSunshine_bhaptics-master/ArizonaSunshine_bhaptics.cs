@@ -91,7 +91,7 @@ namespace ArizonaSunshine_bhaptics
             {
                 Stream stm = (tcpclntRight.GetStream());
                 ASCIIEncoding asen = new ASCIIEncoding();
-                byte[] ba = asen.GetBytes("2");
+                byte[] ba = asen.GetBytes("a");
                 stm.Write(ba, 0, ba.Length);
             }
         }
@@ -101,7 +101,7 @@ namespace ArizonaSunshine_bhaptics
             if (tcpclntLeft.Connected) {
                 Stream stm = (tcpclntLeft.GetStream());
                 ASCIIEncoding asen = new ASCIIEncoding();
-                byte[] ba = asen.GetBytes("2");
+                byte[] ba = asen.GetBytes("a");
                 stm.Write(ba, 0, ba.Length);
             }
         }

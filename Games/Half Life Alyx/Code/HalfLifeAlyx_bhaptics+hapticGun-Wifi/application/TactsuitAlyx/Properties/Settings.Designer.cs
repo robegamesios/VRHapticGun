@@ -1258,6 +1258,36 @@ namespace TactsuitAlyx.Properties {
 
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string LeftHandIpAddress
+        {
+            get
+            {
+                return ((string)(this["LeftHandIpAddress"]));
+            }
+            set
+            {
+                this["LeftHandIpAddress"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("N")]
+        public string LeftHanded
+        {
+            get
+            {
+                return ((string)(this["LeftHanded"]));
+            }
+            set
+            {
+                this["LeftHanded"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("23")]
         public int HapticGunPortNumber
         {

@@ -118,7 +118,7 @@ namespace TactsuitAlyx
                     if (splitted.Length > 1)
                     {
                         //Haptic gun send signal to esp32
-                        createGunHapticFeedbackRight();
+                        createHapticFeedbackRight("a");
                         
                         //BHaptics
                         engine.PlayerShoot(splitted[1].Trim());
@@ -157,7 +157,7 @@ namespace TactsuitAlyx
                         
                         engine.GrabbityLockStart(primary == 1);
 
-                        createGunHapticFeedbackLeft("1");
+                        createHapticFeedbackLeft("1");
                     }
                 }
                 else if (command == "PlayerGrabbityLockStop")
@@ -168,7 +168,7 @@ namespace TactsuitAlyx
 
                         engine.GrabbityLockStop(primary == 1);
 
-                        createGunHapticFeedbackLeft("2");
+                        createHapticFeedbackLeft("2");
                     }
                 }
                 else if (command == "PlayerGrabbityPull")
@@ -179,7 +179,7 @@ namespace TactsuitAlyx
 
                         engine.GrabbityGlovePull(primary == 1);
 
-                        createGunHapticFeedbackLeft("0");
+                        createHapticFeedbackLeft("0");
                     }
                 }
                 else if (command == "PlayerGrabbedByBarnacle")
@@ -464,40 +464,48 @@ namespace TactsuitAlyx
             //Haptic Gun connect to Wifi
             try
             {
-                tcpclntRight = new TcpClient();
 
-                if (txtHapticGunIpAddress.Text != "" && txtHapticGunPortNumber.Text != "")
+                if (txtRightHandIpAddress.Text != "" && txtPortNumber.Text != "")
                 {
-                    Console.WriteLine("Connecting.....");
+                    tcpclntRight = new TcpClient();
+
+                    Console.WriteLine("Connecting Right.....");
 
                     //Change this to use the ip address of your esp32
-                    tcpclntRight.Connect(txtHapticGunIpAddress.Text, Int32.Parse(txtHapticGunPortNumber.Text)); //23 is your port number. Change this to match the port number you specified in the esp32 code
+                    tcpclntRight.Connect(txtRightHandIpAddress.Text, Int32.Parse(txtPortNumber.Text)); //23 is your port number. Change this to match the port number you specified in the esp32 code
 
                     if (tcpclntRight.Connected)
                     {
-                        createGunHapticFeedbackRight();
+                        createHapticFeedbackRight("a");
+
+                        //Save IpAddress and Port Number textboxes
+                        saveHapticGunIpAddress();
                     }
                 }
 
-                if (txtHapticGunIpAddress.Text != "" && txtHapticGunPortNumber.Text != "")
+                if (txtLeftHandIpAddress.Text != "" && txtPortNumber.Text != "")
                 {
                     tcpclntLeft = new TcpClient();
 
+                    Console.WriteLine("Connecting Left.....");
+
                     //Change this to use the ip address of your esp32
-                    tcpclntLeft.Connect("192.168.50.128", Int32.Parse(txtHapticGunPortNumber.Text)); //23 is your port number. Change this to match the port number you specified in the esp32 code
+                    tcpclntLeft.Connect(txtLeftHandIpAddress.Text, Int32.Parse(txtPortNumber.Text)); //23 is your port number. Change this to match the port number you specified in the esp32 code
 
                     if (tcpclntLeft.Connected)
                     {
-                        createGunHapticFeedbackLeft("2");
+                        createHapticFeedbackLeft("a");
+
+                        //Save IpAddress and Port Number textboxes
+                        saveLeftHandIpAddress();
+
                     }
                 }
-                    //Save IpAddress and Port Number textboxes
-                    saveHapticGunIpAddress();
             }
             catch (Exception err)
             {
                 clearHapticGunIpAddress();
-                label4.Text = "Haptic Gun Connection error: check IP Address, Port Number, and the gun is turned ON";
+                label4.Text = "Haptic Device error: check IP Addresses, Port Number, and the devices are turned ON";
                 Console.WriteLine("Error..... " + err.StackTrace);
             }
 
@@ -543,15 +551,28 @@ namespace TactsuitAlyx
 
         private void saveHapticGunIpAddress()
         {
-            Properties.Settings.Default.HapticGunPortNumber = Int32.Parse(txtHapticGunPortNumber.Text); 
-            Properties.Settings.Default.HapticGunIpAddress = txtHapticGunIpAddress.Text;
+            Properties.Settings.Default.HapticGunPortNumber = Int32.Parse(txtPortNumber.Text); 
+            Properties.Settings.Default.HapticGunIpAddress = txtRightHandIpAddress.Text;
+            Properties.Settings.Default.LeftHanded = txtLeftHanded.Text;
             Properties.Settings.Default.Save();
         }
 
         private void clearHapticGunIpAddress()
         {
-            txtHapticGunIpAddress.Text = "";
+            txtRightHandIpAddress.Text = "";
             Properties.Settings.Default.HapticGunIpAddress = "";
+            txtLeftHandIpAddress.Text = "";
+            Properties.Settings.Default.LeftHandIpAddress = "";
+            txtLeftHanded.Text = "N";
+            Properties.Settings.Default.LeftHanded = "N";
+            Properties.Settings.Default.Save();
+        }
+
+        private void saveLeftHandIpAddress()
+        {
+            Properties.Settings.Default.HapticGunPortNumber = Int32.Parse(txtPortNumber.Text);
+            Properties.Settings.Default.LeftHandIpAddress = txtLeftHandIpAddress.Text;
+            Properties.Settings.Default.LeftHanded = txtLeftHanded.Text.ToUpper();
             Properties.Settings.Default.Save();
         }
 
@@ -582,8 +603,8 @@ namespace TactsuitAlyx
                     active = "{None}";
 
                 //Send signal to Haptic gun
-                createGunHapticFeedbackRight();
-                createGunHapticFeedbackLeft("2");
+                createHapticFeedbackRight("a");
+                createHapticFeedbackLeft("a");
 
                 WriteTextSafe("Active devices: " + active);
 
@@ -611,27 +632,55 @@ namespace TactsuitAlyx
         private void Form1_Load(object sender, EventArgs e)
         {
             txtAlyxDirectory.Text = Properties.Settings.Default.AlyxDirectory;
+            txtRightHandIpAddress.Text = Properties.Settings.Default.HapticGunIpAddress;
+            txtLeftHandIpAddress.Text = Properties.Settings.Default.LeftHandIpAddress;
+            txtPortNumber.Text = Properties.Settings.Default.HapticGunPortNumber.ToString();
+            txtLeftHanded.Text = Properties.Settings.Default.LeftHanded;
         }
 
         //hapticGun feedback
-        public static void createGunHapticFeedbackRight()
+        public static void createHapticFeedbackRight(string delayType)
         {
-            if (tcpclntRight.Connected)
+            if (Properties.Settings.Default.LeftHanded == "Y")
             {
-                Stream stm = (tcpclntRight.GetStream());
-                ASCIIEncoding asen = new ASCIIEncoding();
-                byte[] ba = asen.GetBytes("a");
-                stm.Write(ba, 0, ba.Length);
+                if (tcpclntLeft.Connected)
+                {
+                    Stream stm = (tcpclntLeft.GetStream());
+                    ASCIIEncoding asen = new ASCIIEncoding();
+                    byte[] ba = asen.GetBytes(delayType);
+                    stm.Write(ba, 0, ba.Length);
+                }
+            } else
+            {
+                if (tcpclntRight.Connected)
+                {
+                    Stream stm = (tcpclntRight.GetStream());
+                    ASCIIEncoding asen = new ASCIIEncoding();
+                    byte[] ba = asen.GetBytes(delayType);
+                    stm.Write(ba, 0, ba.Length);
+                }
             }
         }
-        public static void createGunHapticFeedbackLeft(string delayTime)
+        public static void createHapticFeedbackLeft(string delayType)
         {
-            if (tcpclntLeft.Connected)
+            if (Properties.Settings.Default.LeftHanded == "Y")
             {
-                Stream stm = (tcpclntLeft.GetStream());
-                ASCIIEncoding asen = new ASCIIEncoding();
-                byte[] ba = asen.GetBytes(delayTime);
-                stm.Write(ba, 0, ba.Length);
+                if (tcpclntRight.Connected)
+                {
+                    Stream stm = (tcpclntRight.GetStream());
+                    ASCIIEncoding asen = new ASCIIEncoding();
+                    byte[] ba = asen.GetBytes(delayType);
+                    stm.Write(ba, 0, ba.Length);
+                }
+            } else
+            {
+                if (tcpclntLeft.Connected)
+                {
+                    Stream stm = (tcpclntLeft.GetStream());
+                    ASCIIEncoding asen = new ASCIIEncoding();
+                    byte[] ba = asen.GetBytes(delayType);
+                    stm.Write(ba, 0, ba.Length);
+                }
             }
         }
     }

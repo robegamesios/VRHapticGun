@@ -133,7 +133,7 @@ Repository of BHaptics Half-Life Alyx: https://github.com/bhaptics/bhaptics-half
     
     e. click Test button - if your gun is properly connected, it should activate (trigger fire).
     
-    ![image](https://user-images.githubusercontent.com/10041871/188356491-48909ea7-a48f-4082-8d35-7fb5a84dc775.png)
+![bHaptics Tactsuit + Haptic Gun Alyx Interface 10_15_2022 8_48_41 PM](https://user-images.githubusercontent.com/10041871/196017083-e8c6a6b1-975b-46d0-b132-9f189f57d668.png)
 
 4. Launch SteamVR and start Half-Life Alyx game.
 

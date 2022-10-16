@@ -86,14 +86,6 @@ The blue light in the esp32 indicates it's connected to wifi.
 3. Open `ESP32-HLA-WIFI.ino` file located in \Games\Half Life Alyx\Esp32\ESP32-HLA-WIFI and change the following if you want to:
 
         const uint ServerPort = 23; //if you change this port, make sure to match this port number you specify in the companion app.
-
-   In the function `EchoReceivedData()` modify the delay time to fit the timing of your ebb. Mine works at 75 millisecond for 1 firing cycle.
-
-        digitalWrite(PIN_MOTOR, HIGH); //This will turn ON the ebb motor
-    
-        delay(75); //Change this to match your timing for the ebb. e.g. 75ms will run the ebb for 1 firing cycle.
-    
-        digitalWrite(PIN_MOTOR, LOW); //This will turn OFF the ebb motor   
            
 4. Go ahead and upload the files to your esp32 board. If you are getting an error, you might need to press the boot button in the esp32 while uploading.
 
@@ -110,7 +102,6 @@ The blue light in the esp32 indicates it's connected to wifi.
     e. If you double click the Reset Button, this will reset the wifi settings, and you will be able to connect to the `HapticGun_Connect` access point again.
     
     ![Screen Shot 2022-09-05 at 8 50 41 PM](https://user-images.githubusercontent.com/10041871/188543318-d1873d3b-3fd7-4a06-92f2-d02b00914bff.png)
-
     
 # Software: For Half-Life Alyx
 I forked a BHaptics Half-Life Alyx repo and updated it to work with the gun's ebb. Credits goes to them for creating the original implementation.
@@ -125,13 +116,19 @@ Repository of BHaptics Half-Life Alyx: https://github.com/bhaptics/bhaptics-half
     
     a. Click the `Browse...` button and select your HLA folder (e.g. `C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx`).
     
-    b. Enter your gun's IP Address and Port Number (default to Port 23. This should match the port number you used in the esp32 firmware).
+    b. Enter `Right Hand IP Add` for the primary hand (shooting hand).
     
-    c. click Start button.
+    c. Enter `Left Hand IP Add` for the secondary hand (grabbity glove).
     
-    d. under the hood, the program will copy `vscripts\tactsuit.lua` to your game directory's vscripts folder (e.g. `C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx\game\hlvr\scripts\vscripts\tactsuit.lua`)
+    d. Enter `Port number` (defaults to 23).
     
-    e. click Test button - if your gun is properly connected, it should activate (trigger fire).
+    e. If you are using your left hand for shooting, just change it in the game settings, the haptic devices will adjust automatically.
+    
+    f. Click Start. The haptic devices will trigger if connection was successful.
+    
+    g. under the hood, the program will copy `vscripts\tactsuit.lua` to your game directory's vscripts folder (e.g. `C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx\game\hlvr\scripts\vscripts\tactsuit.lua`)
+    
+    h. click Test button - if your gun is properly connected, it should activate (trigger fire).
     
 ![bHaptics Tactsuit + Haptic Gun Alyx Interface 10_15_2022 8_48_41 PM](https://user-images.githubusercontent.com/10041871/196017083-e8c6a6b1-975b-46d0-b132-9f189f57d668.png)
 

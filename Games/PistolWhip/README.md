@@ -1,7 +1,10 @@
 # VR Haptic Gun - Pistol Whip Support
 
-Pistol Whip gameplay: https://www.youtube.com/watch?v=IaUro4AgwZc
+Pistol Whip gameplays: 
 
+https://www.youtube.com/watch?v=IaUro4AgwZc
+    
+https://youtu.be/qlAa17PazDs
     
 # Software: 
 I forked a BHaptics Pistol Whip repo and updated it to work with the gun's ebb. Credits goes to Florian Fahrenberger https://github.com/floh-bhaptics for creating the original implementation.

@@ -110,7 +110,7 @@ Repository of BHaptics Half-Life Alyx: https://github.com/bhaptics/bhaptics-half
     
 1. In the Publish Folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/Half%20Life%20Alyx/Code/Publish, download and unzip `Tactsuit+Gun_Alyx.zip`.
                 
-2. Turn on the gun and go ahead and run `TactsuitAlyx.exe`.
+2. Turn on your haptic devices and go ahead and run `TactsuitAlyx.exe`.
     
 3. Once `bHaptics Tactsuit + Haptic Gun Alyx Interface` is open:
     
@@ -118,7 +118,7 @@ Repository of BHaptics Half-Life Alyx: https://github.com/bhaptics/bhaptics-half
     
     b. Enter `Right Hand IP Add` for the primary hand (shooting hand).
     
-    c. Enter `Left Hand IP Add` for the secondary hand (grabbity glove).
+    c. Enter `Left Hand IP Add` for the secondary hand (grabbity glove). If you do not have a secondary haptic device, leave this blank.
     
     d. Enter `Port number` (defaults to 23).
     

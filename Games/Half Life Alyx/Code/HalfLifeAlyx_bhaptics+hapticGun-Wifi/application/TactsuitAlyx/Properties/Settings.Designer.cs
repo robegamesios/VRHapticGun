@@ -1244,15 +1244,15 @@ namespace TactsuitAlyx.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string HapticGunIpAddress
+        public string RightHandIpAddress
         {
             get
             {
-                return ((string)(this["HapticGunIpAddress"]));
+                return ((string)(this["RightHandIpAddress"]));
             }
             set
             {
-                this["HapticGunIpAddress"] = value;
+                this["RightHandIpAddress"] = value;
             }
         }
 
@@ -1268,21 +1268,6 @@ namespace TactsuitAlyx.Properties {
             set
             {
                 this["LeftHandIpAddress"] = value;
-            }
-        }
-
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("N")]
-        public string LeftHanded
-        {
-            get
-            {
-                return ((string)(this["LeftHanded"]));
-            }
-            set
-            {
-                this["LeftHanded"] = value;
             }
         }
 

@@ -46,8 +46,6 @@
             this.btnTest = new System.Windows.Forms.Button();
             this.txtLeftHandIpAddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtLeftHanded = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,7 +88,7 @@
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfo.ForeColor = System.Drawing.Color.Lime;
-            this.lblInfo.Location = new System.Drawing.Point(25, 417);
+            this.lblInfo.Location = new System.Drawing.Point(25, 381);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(74, 20);
             this.lblInfo.TabIndex = 3;
@@ -132,7 +130,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Lime;
-            this.label2.Location = new System.Drawing.Point(25, 387);
+            this.label2.Location = new System.Drawing.Point(25, 351);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(421, 20);
             this.label2.TabIndex = 7;
@@ -228,26 +226,6 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Left Hand IP Add";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(28, 350);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Left Hand (Y/N)";
-            // 
-            // txtLeftHanded
-            // 
-            this.txtLeftHanded.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLeftHanded.Location = new System.Drawing.Point(150, 349);
-            this.txtLeftHanded.MaxLength = 1;
-            this.txtLeftHanded.Name = "txtLeftHanded";
-            this.txtLeftHanded.Size = new System.Drawing.Size(21, 23);
-            this.txtLeftHanded.TabIndex = 18;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,8 +233,6 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(463, 461);
-            this.Controls.Add(this.txtLeftHanded);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtLeftHandIpAddress);
             this.Controls.Add(this.btnTest);
@@ -306,8 +282,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtLeftHandIpAddress;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtLeftHanded;
     }
 }
 

@@ -461,7 +461,7 @@ namespace TactsuitAlyx
             
             parsingMode = true;
 
-            //Haptic Gun connect to Wifi
+            //Right Hand Haptic connect to Wifi
             try
             {
 
@@ -482,7 +482,17 @@ namespace TactsuitAlyx
                         saveHapticGunIpAddress();
                     }
                 }
+            }
+            catch (Exception err)
+            {
+                clearRightHandIpAddress();
+                label4.Text = "error: check Right Hand IP Address, Port Number, and the device is ON";
+                Console.WriteLine("Error..... " + err.StackTrace);
+            }
 
+            //Left Hand Haptic connect to Wifi
+            try
+            {
                 if (txtLeftHandIpAddress.Text != "" && txtPortNumber.Text != "")
                 {
                     tcpclntLeft = new TcpClient();
@@ -504,8 +514,8 @@ namespace TactsuitAlyx
             }
             catch (Exception err)
             {
-                clearHapticGunIpAddress();
-                label4.Text = "Haptic Device error: check IP Addresses, Port Number, and the devices are turned ON";
+                clearLeftHandIpAddress();
+                label4.Text = "error: check Left Hand IP Address, Port Number, and the device is ON";
                 Console.WriteLine("Error..... " + err.StackTrace);
             }
 
@@ -552,19 +562,21 @@ namespace TactsuitAlyx
         private void saveHapticGunIpAddress()
         {
             Properties.Settings.Default.HapticGunPortNumber = Int32.Parse(txtPortNumber.Text); 
-            Properties.Settings.Default.HapticGunIpAddress = txtRightHandIpAddress.Text;
-            Properties.Settings.Default.LeftHanded = txtLeftHanded.Text;
+            Properties.Settings.Default.RightHandIpAddress = txtRightHandIpAddress.Text;
             Properties.Settings.Default.Save();
         }
 
-        private void clearHapticGunIpAddress()
+        private void clearRightHandIpAddress()
         {
             txtRightHandIpAddress.Text = "";
-            Properties.Settings.Default.HapticGunIpAddress = "";
+            Properties.Settings.Default.RightHandIpAddress = "";
+            Properties.Settings.Default.Save();
+        }
+
+        private void clearLeftHandIpAddress()
+        {
             txtLeftHandIpAddress.Text = "";
             Properties.Settings.Default.LeftHandIpAddress = "";
-            txtLeftHanded.Text = "N";
-            Properties.Settings.Default.LeftHanded = "N";
             Properties.Settings.Default.Save();
         }
 
@@ -572,7 +584,6 @@ namespace TactsuitAlyx
         {
             Properties.Settings.Default.HapticGunPortNumber = Int32.Parse(txtPortNumber.Text);
             Properties.Settings.Default.LeftHandIpAddress = txtLeftHandIpAddress.Text;
-            Properties.Settings.Default.LeftHanded = txtLeftHanded.Text.ToUpper();
             Properties.Settings.Default.Save();
         }
 
@@ -632,16 +643,15 @@ namespace TactsuitAlyx
         private void Form1_Load(object sender, EventArgs e)
         {
             txtAlyxDirectory.Text = Properties.Settings.Default.AlyxDirectory;
-            txtRightHandIpAddress.Text = Properties.Settings.Default.HapticGunIpAddress;
+            txtRightHandIpAddress.Text = Properties.Settings.Default.RightHandIpAddress;
             txtLeftHandIpAddress.Text = Properties.Settings.Default.LeftHandIpAddress;
             txtPortNumber.Text = Properties.Settings.Default.HapticGunPortNumber.ToString();
-            txtLeftHanded.Text = Properties.Settings.Default.LeftHanded;
         }
 
         //hapticGun feedback
-        public static void createHapticFeedbackRight(string delayType)
+        public void createHapticFeedbackRight(string delayType)
         {
-            if (Properties.Settings.Default.LeftHanded == "Y")
+            if (engine.leftHandedMode == true)
             {
                 if (tcpclntLeft.Connected)
                 {
@@ -661,9 +671,9 @@ namespace TactsuitAlyx
                 }
             }
         }
-        public static void createHapticFeedbackLeft(string delayType)
+        public void createHapticFeedbackLeft(string delayType)
         {
-            if (Properties.Settings.Default.LeftHanded == "Y")
+            if (engine.leftHandedMode == true)
             {
                 if (tcpclntRight.Connected)
                 {

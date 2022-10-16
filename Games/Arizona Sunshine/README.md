@@ -1,7 +1,10 @@
 # VR Haptic Gun - Arizona Sunshine Support
 
-Arizona Sunshine gameplay: https://youtu.be/VvRvuhjjCRs
+Arizona Sunshine gameplays:
 
+https://youtu.be/fzrwk0Q53G0
+
+https://youtu.be/qlAa17PazDs
     
 # Software: 
 I forked a BHaptics Arizona Sunshine repo and updated it to work with the gun's ebb. Credits goes to Florian Fahrenberger https://github.com/floh-bhaptics for creating the original implementation.

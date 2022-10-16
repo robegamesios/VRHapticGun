@@ -1,6 +1,6 @@
 # VR Haptic Gun - Arizona Sunshine Support
 
-Arizona Sunshine gameplay: coming soon
+Arizona Sunshine gameplay: https://youtu.be/VvRvuhjjCRs
 
     
 # Software: 

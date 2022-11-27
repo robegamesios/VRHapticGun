@@ -119,7 +119,10 @@ namespace TactsuitAlyx
                     {
                         //Haptic gun send signal to esp32
                         createHapticFeedbackRight("a");
-                        
+                        if (engine.twoHandedMode == true)
+                        {
+                            createHapticFeedbackLeft("a");
+                        }
                         //BHaptics
                         engine.PlayerShoot(splitted[1].Trim());
                     }

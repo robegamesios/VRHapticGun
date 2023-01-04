@@ -160,7 +160,8 @@ namespace PistolWhip_bhaptics
                 {
                     isRightHand = true;
                     if (!rightGunHasAmmo) 
-                    { return; 
+                    { 
+                        return; 
                     } else 
                     {
                         PistolWhip_bhaptics.createGunHapticFeedbackRight();

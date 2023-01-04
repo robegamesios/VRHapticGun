@@ -50,60 +50,22 @@ void EchoReceivedData()
   {
     char incoming = RemoteClient.read();
     RemoteClient.write(ReceiveBuffer, incoming);
-    Serial.print("Received: ");
-    Serial.println(incoming);
 
-    if (strcmp(&incoming, "0") == 0) {
-      digitalWrite(PIN_MOTOR, LOW); //This will turn ON the ebb motor
-      
-    } else if (strcmp(&incoming, "1") == 0) {
-      digitalWrite(PIN_MOTOR, HIGH); //This will turn OFF the ebb motor
-                   
-    } else if (strcmp(&incoming, "2") == 0) {
-      digitalWrite(PIN_MOTOR, HIGH);
-      delay(100);
-      digitalWrite(PIN_MOTOR, LOW);
-
-    } else if (strcmp(&incoming, "3") == 0) {
-      digitalWrite(PIN_MOTOR, HIGH);
-      delay(125);
-      digitalWrite(PIN_MOTOR, LOW);
-      
-    } else if (strcmp(&incoming, "4") == 0) {
-      digitalWrite(PIN_MOTOR, HIGH);
-      delay(150);
-      digitalWrite(PIN_MOTOR, LOW);
-
-    } else if (strcmp(&incoming, "5") == 0) {
-      digitalWrite(PIN_MOTOR, HIGH);
-      delay(175);
-      digitalWrite(PIN_MOTOR, LOW);
-
-    } else if (strcmp(&incoming, "6") == 0) {
-      digitalWrite(PIN_MOTOR, HIGH);
-      delay(200);
-      digitalWrite(PIN_MOTOR, LOW);
-
-    } else if (strcmp(&incoming, "7") == 0) {
-      digitalWrite(PIN_MOTOR, HIGH);
-      delay(225);
-      digitalWrite(PIN_MOTOR, LOW);
-
-    } else if (strcmp(&incoming, "8") == 0) {
-      digitalWrite(PIN_MOTOR, HIGH);
-      delay(250);
-      digitalWrite(PIN_MOTOR, LOW);
-
-    } else if (strcmp(&incoming, "9") == 0) {
-      digitalWrite(PIN_MOTOR, HIGH);
-      delay(5000);
-      digitalWrite(PIN_MOTOR, LOW);
-
-    } else {
       digitalWrite(PIN_MOTOR, HIGH); //This will turn ON the ebb motor
       delay(75); //Change this to match your timing for the ebb. e.g. 75ms will run the ebb for 1 firing cycle.
       digitalWrite(PIN_MOTOR, LOW); //This will turn OFF the ebb motor
-    }
+
+//     if (strcmp(&incoming, "a") == 0) {
+//      digitalWrite(PIN_MOTOR, HIGH); //This will turn ON the ebb motor
+//      delay(75); //Change this to match your timing for the ebb. e.g. 75ms will run the ebb for 1 firing cycle.
+//      digitalWrite(PIN_MOTOR, LOW); //This will turn OFF the ebb motor
+//      
+//    } else if (strcmp(&incoming, "1") == 0) {
+//      digitalWrite(PIN_MOTOR, HIGH); //This will turn ON the ebb motor
+//      
+//    } else if (strcmp(&incoming, "0") == 0) {
+//      digitalWrite(PIN_MOTOR, LOW); //This will turn OFF the ebb motor
+//    }
   }
 }
 

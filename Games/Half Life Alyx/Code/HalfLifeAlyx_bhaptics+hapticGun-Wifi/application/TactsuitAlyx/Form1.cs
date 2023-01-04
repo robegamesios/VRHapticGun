@@ -119,10 +119,10 @@ namespace TactsuitAlyx
                     {
                         //Haptic gun send signal to esp32
                         createHapticFeedbackRight("a");
-                        if (engine.twoHandedMode == true)
-                        {
-                            createHapticFeedbackLeft("a");
-                        }
+//                        if (engine.twoHandedMode == true)
+//                        {
+//                            createHapticFeedbackLeft("a");
+//                        }
                         //BHaptics
                         engine.PlayerShoot(splitted[1].Trim());
                     }
@@ -171,7 +171,7 @@ namespace TactsuitAlyx
 
                         engine.GrabbityLockStop(primary == 1);
 
-                        createHapticFeedbackLeft("2");
+                        createHapticFeedbackLeft("a");
                     }
                 }
                 else if (command == "PlayerGrabbityPull")

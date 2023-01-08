@@ -130,10 +130,10 @@ namespace ParadoxOfHope_bhaptics
                     {
                         ParadoxOfHope_bhaptics.createGunHapticFeedbackLeft();
                     }
-                }
 
-                //bHaptics feedback
-                tactsuitVr.GunRecoil(isRightHanded);
+                    //bHaptics feedback
+                    tactsuitVr.GunRecoil(isRightHanded);
+                }
             }
         }
 
@@ -162,10 +162,10 @@ namespace ParadoxOfHope_bhaptics
                     {
                         ParadoxOfHope_bhaptics.createGunHapticFeedbackLeft();
                     }
-                }
 
-                //bHaptics feedback
-                tactsuitVr.GunRecoil(isRight);
+                    //bHaptics feedback
+                    tactsuitVr.GunRecoil(isRight);
+                }
             }
         }
 

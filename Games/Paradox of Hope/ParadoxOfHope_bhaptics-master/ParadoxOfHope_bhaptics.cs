@@ -144,11 +144,11 @@ namespace ParadoxOfHope_bhaptics
             public static void Postfix(RaycastWeapon __instance)
             {
                 bool isRight = (__instance.thisGrabber.HandSide == ControllerHand.Right);
-                bool canShoot = __instance.GetBulletCount() > 0 || __instance.BulletInChamber == true;
+                bool canShoot = __instance.BulletInChamber == true;
 
-                //hapticGun feedback
                 if (canShoot)
                 {
+                    //hapticGun feedback
                     if (__instance.PistolSecondHand)
                     {
                         ParadoxOfHope_bhaptics.createGunHapticFeedbackRight();

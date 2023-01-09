@@ -29,7 +29,7 @@ Repository of Pistol Whip BHaptics: https://github.com/floh-bhaptics/PistolWhip_
 
     <img width="794" alt="Screen Shot 2022-09-17 at 9 14 12 PM" src="https://user-images.githubusercontent.com/10041871/190885509-b65afabf-f80d-4dcb-a586-f0d11f521637.png">
 
-4. Launch SteamVR and start Pistol Whip.
+4. Launch SteamVR and start the game.
 
 NOTE: This app will work with the Haptic Gun even if you do not have BHaptics gear (tactsuit, tactosy, etc). Likewise, it should work with BHaptics gear without having a Haptic Gun. 
 

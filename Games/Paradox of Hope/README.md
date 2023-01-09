@@ -1,21 +1,16 @@
-# VR Haptic Gun - Arizona Sunshine Support
+# VR Haptic Gun - Paradox of Hope Support
 
-Arizona Sunshine gameplays:
-
-https://youtu.be/fzrwk0Q53G0
-
-https://youtu.be/qlAa17PazDs
+Paradox of Hope gameplay:
+https://youtu.be/ZVXCTZkUjYM
     
 # Software: 
-I forked a BHaptics Arizona Sunshine repo and updated it to work with the gun's ebb. Credits goes to Florian Fahrenberger https://github.com/floh-bhaptics for creating the original implementation.
+I forked a BHaptics Paradox of Hope repo and updated it to work with the gun's ebb. Credits goes to Florian Fahrenberger https://github.com/floh-bhaptics for creating the original implementation.
 
-Repository of Arizona Sunshine BHaptics: https://github.com/floh-bhaptics/ArizonaSunshine_bhaptics
+Repository of Paradox of Hope BHaptics: https://github.com/floh-bhaptics/ParadoxOfHope_bhaptics
     
 1. Download and install MelonLoader (and the requirements for it if needed) into the game's directory: https://melonwiki.xyz/#/
 
-2. Copy the contents of Publish folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/Arizona%20Sunshine/Publish to your Arizona Sunshine MelonLoader Mods folder (e.g. C:\\Program Files (x86)\Steam\steamapps\common\Arizona Sunshine\Mods)
-
-    ![Screenshot (13)](https://user-images.githubusercontent.com/10041871/190916459-03a49faa-2432-457d-bfb1-91e2b7a7dfb8.png)
+2. Copy the contents of Publish folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/Paradox%20of%20Hope/Publish to your Paradox of Hope MelonLoader Mods folder (e.g. C:\\Program Files (x86)\Steam\steamapps\common\Paradox of Hope\Mods)
 
 3. Open `hapticGunConfig.txt` 
 
@@ -42,5 +37,5 @@ NOTE: This app will work with the Haptic Gun even if you do not have BHaptics ge
 
 3. If it's il2cpp, then it will only be available once you run the game with MelonLoader installed, and in "MelonLoader/Managed".
 
-# Repository of Arizona Sunshine BHaptics:
-https://github.com/floh-bhaptics/ArizonaSunshine_bhaptics
+# Repository of Paradox of Hope BHaptics:
+https://github.com/floh-bhaptics/ParadoxOfHope_bhaptics

@@ -26,9 +26,7 @@ namespace ParadoxOfHope_bhaptics
 
         public static TcpClient tcpclntRight;
         public static TcpClient tcpclntLeft;
-        public static bool hasAmmo = false;
-        public static int ammoCount = 0;
-
+ 
         public override void OnInitializeMelon()
         {
             tactsuitVr = new TactsuitVR();
@@ -113,59 +111,34 @@ namespace ParadoxOfHope_bhaptics
             }
         }
 
-        [HarmonyPatch(typeof(Revolver), "Shoot", new Type[] { })]
-        public class bhaptics_ShootRevolver
-        {
-            [HarmonyPostfix]
-            public static void Postfix(Revolver __instance)
-            {
-                //hapticGun feedback
-                if (__instance.CurrentBulletCount > 0)
-                {
-                    if (isRightHanded)
-                    {
-                        ParadoxOfHope_bhaptics.createGunHapticFeedbackRight();
-                    }
-                    else
-                    {
-                        ParadoxOfHope_bhaptics.createGunHapticFeedbackLeft();
-                    }
-
-                    //bHaptics feedback
-                    tactsuitVr.GunRecoil(isRightHanded);
-                }
-            }
-        }
-
         [HarmonyPatch(typeof(RaycastWeapon), "Shoot", new Type[] {  })]
         public class bhaptics_ShootWeapon
         {
             [HarmonyPostfix]
             public static void Postfix(RaycastWeapon __instance)
             {
+                if (!__instance.readyToShoot) return;
+                if (!__instance.BulletInChamber) return;
+
                 bool isRight = (__instance.thisGrabber.HandSide == ControllerHand.Right);
-                bool canShoot = __instance.BulletInChamber == true;
-
-                if (canShoot)
+ 
+                //hapticGun feedback
+                if (__instance.PistolSecondHand)
                 {
-                    //hapticGun feedback
-                    if (__instance.PistolSecondHand)
-                    {
-                        ParadoxOfHope_bhaptics.createGunHapticFeedbackRight();
-                        ParadoxOfHope_bhaptics.createGunHapticFeedbackLeft();
-                    }
-                    else if (isRight)
-                    {
-                        ParadoxOfHope_bhaptics.createGunHapticFeedbackRight();
-                    }
-                    else
-                    {
-                        ParadoxOfHope_bhaptics.createGunHapticFeedbackLeft();
-                    }
-
-                    //bHaptics feedback
-                    tactsuitVr.GunRecoil(isRight);
+                    ParadoxOfHope_bhaptics.createGunHapticFeedbackRight();
+                    ParadoxOfHope_bhaptics.createGunHapticFeedbackLeft();
                 }
+                else if (isRight)
+                {
+                    ParadoxOfHope_bhaptics.createGunHapticFeedbackRight();
+                }
+                else
+                {
+                    ParadoxOfHope_bhaptics.createGunHapticFeedbackLeft();
+                }
+
+                //bHaptics feedback
+                tactsuitVr.GunRecoil(isRight);
             }
         }
 

@@ -1,4 +1,4 @@
-# VR Haptic Gun
+c
 
 This repo contains the hardware list, arduino firmware, software and STL files I used to build a VR Haptic Gun.
 
@@ -111,4 +111,9 @@ The blue light in the esp32 indicates it's connected to wifi.
     
     ![Screen Shot 2022-09-05 at 8 50 41 PM](https://user-images.githubusercontent.com/10041871/188543318-d1873d3b-3fd7-4a06-92f2-d02b00914bff.png)
     
+# VR Haptic Gun Supported Games
+
+Check out the current supported games and instructions on how to implement the mods:
+
+https://github.com/robegamesios/VRHapticGun/tree/main/Games
 

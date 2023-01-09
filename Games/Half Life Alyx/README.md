@@ -1,4 +1,4 @@
-# VR Haptic Gun - Pistol Whip Support
+# VR Haptic Gun - Half-Life Alyx Support
 
 Half-Life Alyx gameplays: 
 

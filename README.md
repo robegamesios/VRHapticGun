@@ -4,8 +4,6 @@ Full tutorial videos:
 
 https://www.youtube.com/watch?v=5z2f2qFMsvU
 
-https://youtu.be/VvRvuhjjCRs
-
 https://youtu.be/I8qgrTlQDaU
 
 https://youtu.be/MwO-OpeiYZA

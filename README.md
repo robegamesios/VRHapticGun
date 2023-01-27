@@ -1,5 +1,3 @@
-c
-
 This repo contains the hardware list, arduino firmware, software and STL files I used to build a VR Haptic Gun.
 
 Full tutorial videos: 

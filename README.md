@@ -6,9 +6,11 @@ https://www.youtube.com/watch?v=5z2f2qFMsvU
 
 https://youtu.be/VvRvuhjjCRs
 
-Half-Life Alyx gameplay: https://www.youtube.com/watch?v=Ae00qbjxJs0
+https://youtu.be/I8qgrTlQDaU
 
-Pistol Whip gameplay: https://www.youtube.com/watch?v=IaUro4AgwZc
+https://youtu.be/MwO-OpeiYZA
+
+https://youtu.be/VvRvuhjjCRs
 
 # Hardware:
 For items 1 and 2, I think any toy gun with electric blowback (ebb) will work including those airsoft guns with ebb. I bought a lot of four RK45 and one SR12 for $50 including shipping from facebook marketplace.

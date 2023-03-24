@@ -1,21 +1,18 @@
-# VR Haptic Gun - Arizona Sunshine Support
+# VR Haptic Gun - Gun Club VR Support
 
-Arizona Sunshine gameplays:
+Gun Club VR gameplay:
 
-https://youtu.be/RnfdP4cvCWg
+https://youtu.be/TlkulXmmI5o
 
-https://youtu.be/fzrwk0Q53G0
-
-https://youtu.be/qlAa17PazDs
     
 # Software: 
-I forked a BHaptics Arizona Sunshine repo and updated it to work with the gun's ebb. Credits goes to Florian Fahrenberger https://github.com/floh-bhaptics for creating the original implementation.
+I forked a BHaptics Gun Club VR repo and updated it to work with the gun's ebb. Credits goes to Florian Fahrenberger https://github.com/floh-bhaptics for creating the original implementation.
 
-Repository of Arizona Sunshine BHaptics: https://github.com/floh-bhaptics/ArizonaSunshine_bhaptics
+Repository of Gun Club VR BHaptics: https://github.com/floh-bhaptics/GunClubVR_bhaptics
     
 1. Download and install MelonLoader (and the requirements for it if needed) into the game's directory: https://melonwiki.xyz/#/
 
-2. Copy the contents of Publish folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/Arizona%20Sunshine/Publish to your Arizona Sunshine MelonLoader Mods folder (e.g. C:\\Program Files (x86)\Steam\steamapps\common\Arizona Sunshine\Mods)
+2. Copy the contents of Publish folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/GunClubVR/Publish to your Gun Club VR MelonLoader Mods folder (e.g. C:\\Program Files (x86)\Steam\steamapps\common\GunClub VR\Mods)
 
     ![Screenshot (13)](https://user-images.githubusercontent.com/10041871/190916459-03a49faa-2432-457d-bfb1-91e2b7a7dfb8.png)
 
@@ -44,5 +41,5 @@ NOTE: This app will work with the Haptic Gun even if you do not have BHaptics ge
 
 3. If it's il2cpp, then it will only be available once you run the game with MelonLoader installed, and in "MelonLoader/Managed".
 
-# Repository of Arizona Sunshine BHaptics:
-https://github.com/floh-bhaptics/ArizonaSunshine_bhaptics
+# Repository of Gun Club VR BHaptics:
+https://github.com/floh-bhaptics/GunClubVR_bhaptics

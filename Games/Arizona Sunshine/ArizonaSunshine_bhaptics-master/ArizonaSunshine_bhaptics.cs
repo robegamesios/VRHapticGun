@@ -87,7 +87,7 @@ namespace ArizonaSunshine_bhaptics
         //hapticGun feedback
         public static void createGunHapticFeedbackRight()
         {
-            if (tcpclntRight.Connected)
+            if (tcpclntRight != null && tcpclntRight.Connected)
             {
                 Stream stm = (tcpclntRight.GetStream());
                 ASCIIEncoding asen = new ASCIIEncoding();
@@ -98,7 +98,7 @@ namespace ArizonaSunshine_bhaptics
 
         public static void createGunHapticFeedbackLeft()
         {
-            if (tcpclntLeft.Connected) {
+            if (tcpclntLeft != null && tcpclntLeft.Connected) {
                 Stream stm = (tcpclntLeft.GetStream());
                 ASCIIEncoding asen = new ASCIIEncoding();
                 byte[] ba = asen.GetBytes("a");

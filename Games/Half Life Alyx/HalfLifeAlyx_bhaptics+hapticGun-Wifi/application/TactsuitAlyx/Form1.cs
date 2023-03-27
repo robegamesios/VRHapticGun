@@ -656,7 +656,7 @@ namespace TactsuitAlyx
         {
             if (engine.leftHandedMode == true)
             {
-                if (tcpclntLeft.Connected)
+                if (tcpclntLeft != null && tcpclntLeft.Connected)
                 {
                     Stream stm = (tcpclntLeft.GetStream());
                     ASCIIEncoding asen = new ASCIIEncoding();
@@ -665,7 +665,7 @@ namespace TactsuitAlyx
                 }
             } else
             {
-                if (tcpclntRight.Connected)
+                if (tcpclntRight != null && tcpclntRight.Connected)
                 {
                     Stream stm = (tcpclntRight.GetStream());
                     ASCIIEncoding asen = new ASCIIEncoding();
@@ -678,7 +678,7 @@ namespace TactsuitAlyx
         {
             if (engine.leftHandedMode == true)
             {
-                if (tcpclntRight.Connected)
+                if (tcpclntRight != null && tcpclntRight.Connected)
                 {
                     Stream stm = (tcpclntRight.GetStream());
                     ASCIIEncoding asen = new ASCIIEncoding();
@@ -687,7 +687,7 @@ namespace TactsuitAlyx
                 }
             } else
             {
-                if (tcpclntLeft.Connected)
+                if (tcpclntLeft != null && tcpclntLeft.Connected)
                 {
                     Stream stm = (tcpclntLeft.GetStream());
                     ASCIIEncoding asen = new ASCIIEncoding();

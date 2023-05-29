@@ -1,0 +1,11 @@
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\bin\Debug\CRISISVRIGADE2_bhaptics.dll
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\bin\Debug\CRISISVRIGADE2_bhaptics.pdb
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\bin\Debug\0Harmony.dll
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\bin\Debug\Il2Cppmscorlib.dll
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\bin\Debug\UnityEngine.CoreModule.dll
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\bin\Debug\UnityEngine.PhysicsModule.dll
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\obj\Debug\CRISISVRIGADE2_bhaptics.csproj.AssemblyReference.cache
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\obj\Debug\CRISISVRIGADE2_bhaptics.csproj.CoreCompileInputs.cache
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\obj\Debug\CRISISVRIGADE2_bhaptics.csproj.CopyComplete
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\obj\Debug\CRISISVRIGADE2_bhaptics.dll
+C:\Users\robeg\OneDrive\Documents\00_GitRepo\VRHapticGun\Games\CRISISVRIGADE2_bhaptics\obj\Debug\CRISISVRIGADE2_bhaptics.pdb

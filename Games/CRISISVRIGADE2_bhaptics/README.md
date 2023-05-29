@@ -1,4 +1,4 @@
-# VR Haptic Gun - Crisis Vrigade 2 Support
+# VR Haptic Gun - Crisis VRigade 2 Support
 
 Crisis Vrigade 2 gameplays:
 

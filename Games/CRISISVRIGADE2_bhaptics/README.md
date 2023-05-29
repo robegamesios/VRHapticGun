@@ -1,21 +1,14 @@
-# VR Haptic Gun - Arizona Sunshine Support
+# VR Haptic Gun - Crisis Vrigade 2 Support
 
-Arizona Sunshine gameplays:
+Crisis Vrigade 2 gameplays:
 
-https://youtu.be/RnfdP4cvCWg
+*******coming soon********
 
-https://youtu.be/fzrwk0Q53G0
-
-https://youtu.be/qlAa17PazDs
-    
-# Software: 
-I forked a BHaptics Arizona Sunshine repo and updated it to work with the gun's ebb. Credits goes to Florian Fahrenberger https://github.com/floh-bhaptics for creating the original implementation.
-
-Repository of Arizona Sunshine BHaptics: https://github.com/floh-bhaptics/ArizonaSunshine_bhaptics
-    
+# Software:     
+BHaptics is natively supported for this game. This mod is to support the VR Haptic Gun.
 1. Download and install MelonLoader (and the requirements for it if needed) into the game's directory: https://melonwiki.xyz/#/
 
-2. Copy the contents of Publish folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/Arizona%20Sunshine/Publish to your Arizona Sunshine MelonLoader Mods folder (e.g. C:\\Program Files (x86)\Steam\steamapps\common\Arizona Sunshine\Mods)
+2. Copy the contents of Publish folder https://github.com/robegamesios/VRHapticGun/tree/main/Games/CRISISVRIGADE2_bhaptics/Publish to your Crisis VRigade 2 MelonLoader Mods folder (e.g. C:\\Program Files (x86)\Steam\steamapps\common\Crisis VRigade 2\Mods)
 
     ![Screenshot (13)](https://user-images.githubusercontent.com/10041871/190916459-03a49faa-2432-457d-bfb1-91e2b7a7dfb8.png)
 
@@ -44,5 +37,3 @@ NOTE: This app will work with the Haptic Gun even if you do not have BHaptics ge
 
 3. If it's il2cpp, then it will only be available once you run the game with MelonLoader installed, and in "MelonLoader/Managed".
 
-# Repository of Arizona Sunshine BHaptics:
-https://github.com/floh-bhaptics/ArizonaSunshine_bhaptics

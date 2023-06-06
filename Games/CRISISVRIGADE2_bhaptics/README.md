@@ -2,7 +2,7 @@
 
 Crisis Vrigade 2 gameplays:
 
-*******coming soon********
+https://youtu.be/u_--YtQDp1o
 
 # Software:     
 BHaptics is natively supported for this game. This mod is to support the VR Haptic Gun.

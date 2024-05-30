@@ -1,3 +1,7 @@
+# DIY VR Haptic Gun
+
+![maxresdefault](https://github.com/robegamesios/VRHapticGun/assets/10041871/83191cce-b2a6-4577-97f7-fb1c271fc422)
+
 This repo contains the hardware list, arduino firmware, software and STL files I used to build a VR Haptic Gun.
 
 Full tutorial videos: 

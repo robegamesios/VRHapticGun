@@ -1,5 +1,7 @@
 # DIY VR Haptic Gun
 
+_**VR Haptic Gun is a VR gun controller that integrates haptic feedback to greatly enhance the immersive experience while playing VR shooting games. It replicates the recoil sensation of a gun when fired, and is powered by an ESP32 microcontroller that seamlessly communicates with VR games through a middleware.**_
+
 ![maxresdefault](https://github.com/robegamesios/VRHapticGun/assets/10041871/83191cce-b2a6-4577-97f7-fb1c271fc422)
 
 This repo contains the hardware list, arduino firmware, software and STL files I used to build a VR Haptic Gun.
